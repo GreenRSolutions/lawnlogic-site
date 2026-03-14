@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LawnLogic Turf | Family-Owned Artificial Turf Installation in Kennesaw, Marietta & North Georgia</title>
-    <meta name="description" content="LawnLogic Turf is a family-owned artificial turf installer with 20+ years of experience, proudly serving Kennesaw, Marietta, Acworth, Woodstock & all of North Georgia. Licensed, insured & bonded. Free quotes, honest pricing.">
-    <meta name="keywords" content="artificial turf installation Kennesaw, artificial grass Marietta, synthetic turf Acworth, fake grass Woodstock, turf installer Canton GA, artificial lawn North Georgia, putting green installation Atlanta, pet turf Georgia, family owned turf company Georgia, local turf installer near me">
+    <title>LawnLogic Turf | Artificial Turf Installation in Kennesaw & North Georgia</title>
+    <meta name="description" content="Family-owned artificial turf installer in Kennesaw, GA. 20+ years experience. Residential lawns, pet turf, putting greens, sport courts & hardscaping. Free quotes. Licensed & insured.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.lawnlogicturf.com/">
     <meta property="og:title" content="LawnLogic Turf | Family-Owned Turf Installation in North Georgia">
@@ -862,24 +861,7 @@
             box-shadow: 0 4px 12px rgba(42,125,79,.25);
         }
 
-        /* ===== SERVICES TAGS SECTION ===== */
-        .services-seo {
-            padding: 80px 0; background: var(--white);
-        }
-        .services-seo .section-header { margin-bottom: 48px; }
-        .services-tags {
-            display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
-        }
-        .service-tag {
-            display: inline-flex; align-items: center; padding: 8px 16px;
-            background: var(--green-pale); color: var(--green-rich); border-radius: 20px;
-            font-size: .85rem; font-weight: 500; border: 1px solid var(--green-light);
-            transition: all .25s;
-        }
-        .service-tag:hover {
-            background: var(--green-light); color: var(--white);
-            transform: translateY(-2px);
-        }
+        /* (keyword tag section removed for SEO health) */
 
         /* ===== GALLERY IMAGE ZOOM ===== */
         .gallery-grid > div {
@@ -892,12 +874,8 @@
             transform: scale(1.1);
         }
 
-        /* ===== BUTTON PULSE ===== */
-        .btn-green { animation: btn-pulse 3s ease-in-out infinite; }
-        @keyframes btn-pulse {
-            0%, 100% { box-shadow: 0 4px 16px rgba(42,125,79,.25), 0 1px 3px rgba(42,125,79,.2); }
-            50% { box-shadow: 0 4px 32px rgba(42,125,79,.45), 0 1px 3px rgba(42,125,79,.2); }
-        }
+        /* btn-green hover glow (no infinite pulse — cleaner look) */
+        .btn-green:hover { box-shadow: 0 8px 32px rgba(42,125,79,.45), 0 2px 6px rgba(42,125,79,.2); }
 
         /* ===== FINAL CTA ===== */
         .final-cta {
@@ -954,30 +932,58 @@
         @media (max-width: 768px) {
             .nav-links, .nav-actions { display: none; }
             .hamburger { display: flex; }
-            .hero { padding: 110px 0 0; }
+            .hero { padding: 100px 0 0; }
             .hero-bg-shape { display: none; }
             .hero-card-float, .hero-badge-float { display: none; }
+            .hero h1 { font-size: clamp(2rem, 7vw, 2.6rem); }
+            .hero-sub { font-size: 1rem; line-height: 1.7; }
+            .hero-btns { gap: 10px; }
+            .hero-btns .btn { padding: 16px 28px; font-size: .95rem; }
+            .hero-social-proof { flex-wrap: wrap; gap: 10px; padding: 16px 0; }
+            .hero-visual { max-width: 100%; padding-bottom: 20px; }
             .services-grid { grid-template-columns: 1fr; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
-            .shop-grid { grid-template-columns: repeat(2, 1fr) !important; }
-            .partners-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .svc { padding: 24px 20px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+            .shop-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+            .partners-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
             .process-steps { grid-template-columns: 1fr 1fr; }
             .process-steps::before { display: none; }
             .dt-features { grid-template-columns: 1fr; }
             .story-values { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .story-title { font-size: clamp(1.6rem, 5vw, 2rem); }
+            .calc-interactive { padding: 24px 20px; }
+            .calc-heading { font-size: 1.25rem; }
+            .calc-results-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .section-header { margin-bottom: 36px; }
+            .sh-title { font-size: clamp(1.6rem, 5.5vw, 2.2rem); }
+            .sh-desc { font-size: .95rem; }
+            .faq-item .fq { font-size: .95rem; padding: 16px 18px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
             .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+            .final-cta { padding: 80px 20px; }
+            .final-cta h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+            .financing-cards { grid-template-columns: 1fr; gap: 12px; }
+            .areas { padding: 60px 0; }
+            .areas-grid { gap: 8px; }
         }
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero { padding: 90px 0 0; }
+            .hero h1 { font-size: 1.9rem; line-height: 1.12; }
+            .hero-sub { font-size: .92rem; margin-bottom: 24px; }
             .hero-btns, .final-cta-btns, .dt-btns { flex-direction: column; }
-            .hero-btns .btn, .final-cta-btns .btn { width: 100%; }
+            .hero-btns .btn, .final-cta-btns .btn { width: 100%; text-align: center; }
+            .container { padding: 0 16px; }
+            .services-grid .svc { padding: 20px 16px; }
             .areas-grid { grid-template-columns: 1fr 1fr; }
-            .gallery-grid { grid-template-columns: 1fr !important; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 6px !important; }
             .shop-grid { grid-template-columns: 1fr !important; }
             .partners-grid { grid-template-columns: 1fr !important; }
             .stats-grid { grid-template-columns: 1fr; }
             .financing-cards { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+            .testi { min-width: 280px; padding: 24px 20px; }
+            .calc-results-grid { grid-template-columns: 1fr; }
+            .story-main-img { aspect-ratio: 3/3; padding: 24px; }
         }
 
         /* ===== STICKY MOBILE CTA BAR ===== */
@@ -1289,9 +1295,8 @@
                     We're the Broadheads and the LawnLogic family. A local, family-run turf company that treats every yard like our own. Premium artificial grass, honest pricing, and people who actually pick up the phone.
                 </p>
                 <div class="hero-btns">
-                    <a href="#" class="btn btn-lg btn-green" onclick="event.preventDefault();openLeadForm();">Get Your Free Quote &rarr;</a>
-                    <a href="https://www.getturfinstant.com/designer" class="btn btn-lg btn-outline" target="_blank">Design My Yard</a>
-                    <a href="https://www.getturfinstant.com" class="btn btn-lg" style="color:var(--green-rich);border:2px solid var(--green-light);border-radius:80px;background:transparent;" target="_blank">Try Our Free Tool</a>
+                    <a href="https://www.getturfinstant.com" class="btn btn-lg btn-green" target="_blank">Design My Yard Free &rarr;</a>
+                    <a href="tel:7067018873" class="btn btn-lg btn-outline">&#128222; (706) 701-8873</a>
                 </div>
                 <div class="hero-social-proof">
                     <div class="hero-avatars">
@@ -1973,68 +1978,7 @@
     </div>
 </section>
 
-<!-- SERVICES FOR SEO -->
-<section class="services-seo" id="services-seo">
-    <div class="container">
-        <div class="section-header">
-            <div class="sh-eyebrow">What We Offer</div>
-            <h2 class="sh-title">A Complete Range of<br>Turf & Outdoor Solutions</h2>
-            <p class="sh-desc">From residential yards to commercial projects, we handle every type of installation.</p>
-        </div>
-        <div class="services-tags">
-            <span class="service-tag">Artificial turf installation</span>
-            <span class="service-tag">Synthetic grass</span>
-            <span class="service-tag">Artificial grass</span>
-            <span class="service-tag">Fake grass</span>
-            <span class="service-tag">Residential lawns</span>
-            <span class="service-tag">Backyard turf</span>
-            <span class="service-tag">Front yard turf</span>
-            <span class="service-tag">Pet-friendly turf</span>
-            <span class="service-tag">Dog turf</span>
-            <span class="service-tag">Dog runs</span>
-            <span class="service-tag">Putting greens</span>
-            <span class="service-tag">Golf turf</span>
-            <span class="service-tag">Sport courts</span>
-            <span class="service-tag">Pickleball courts</span>
-            <span class="service-tag">Bocce ball courts</span>
-            <span class="service-tag">Basketball courts</span>
-            <span class="service-tag">Playground turf</span>
-            <span class="service-tag">Play areas</span>
-            <span class="service-tag">Commercial turf</span>
-            <span class="service-tag">Office landscaping</span>
-            <span class="service-tag">Hardscaping</span>
-            <span class="service-tag">Pavers</span>
-            <span class="service-tag">Retaining walls</span>
-            <span class="service-tag">Fire pits</span>
-            <span class="service-tag">Pool surrounds</span>
-            <span class="service-tag">Rooftop turf</span>
-            <span class="service-tag">Balcony turf</span>
-            <span class="service-tag">Patio turf</span>
-            <span class="service-tag">Tree removal</span>
-            <span class="service-tag">Fence installation</span>
-            <span class="service-tag">Exterior painting</span>
-            <span class="service-tag">Drainage systems</span>
-            <span class="service-tag">Deck building</span>
-            <span class="service-tag">Roofing replacement</span>
-            <span class="service-tag">Concrete driveways</span>
-            <span class="service-tag">Outdoor kitchens</span>
-            <span class="service-tag">Pergolas</span>
-            <span class="service-tag">Shade structures</span>
-            <span class="service-tag">Landscape design &amp; build</span>
-            <span class="service-tag">Irrigation systems</span>
-            <span class="service-tag">Sod installation</span>
-            <span class="service-tag">Siding replacement</span>
-            <span class="service-tag">Garage doors</span>
-            <span class="service-tag">Pressure washing</span>
-            <span class="service-tag">Gutter installation</span>
-            <span class="service-tag">Gutter guards</span>
-            <span class="service-tag">Turf repair</span>
-            <span class="service-tag">Turf replacement</span>
-            <span class="service-tag">Outdoor living spaces</span>
-            <span class="service-tag">Hardscape patios</span>
-        </div>
-    </div>
-</section>
+<!-- Services covered in structured data and main services section above -->
 
 <!-- FINANCING -->
 <section class="financing" id="financing">
