@@ -132,7 +132,13 @@
         "bestRating": "5",
         "worstRating": "1"
       },
-      "sameAs": []
+      "sameAs": [
+        "https://www.instagram.com/lawnlogicturf",
+        "https://www.facebook.com/LawnLogicTurfGA",
+        "https://www.tiktok.com/@lawnlogicturf",
+        "https://www.youtube.com/@LawnLogicTurf",
+        "https://linktr.ee/lawnlogic"
+      ]
     }
     </script>
 
@@ -530,7 +536,7 @@
 
         /* ===== CALCULATOR ===== */
         .calculator {
-            padding: 100px 0; background: var(--white); position: relative;
+            padding: 100px 0; background: var(--white); position: relative; overflow-x: hidden;
         }
         .calculator::before {
             content: ''; position: absolute; inset: 0;
@@ -545,6 +551,7 @@
             background: var(--cream); border: 1px solid var(--cream-dark);
             border-radius: 24px; padding: 40px; position: relative;
             box-shadow: 0 8px 32px rgba(0,0,0,.06);
+            max-width: 100%; overflow: hidden;
         }
         .calc-title-small {
             font-family: var(--hand); font-size: 1.2rem; color: var(--green-rich); margin-bottom: 4px;
@@ -1122,8 +1129,14 @@
 
         /* Responsive warranty section */
         @media (max-width: 1024px) {
-            #warranty .container > div > div { grid-template-columns: 1fr !important; }
-            #warranty .container > div > div > div:last-child { grid-column: span 1 !important; }
+            #warranty .warranty-grid { grid-template-columns: 1fr !important; }
+            #warranty .warranty-details { grid-column: span 1 !important; }
+            #warranty .warranty-badge-wrap { max-width: 200px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            #warranty .warranty-grid { gap: 24px !important; }
+            #warranty .warranty-details-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+            #warranty .warranty-badge-wrap { max-width: 160px; }
         }
     </style>
 </head>
@@ -1244,7 +1257,7 @@
                 <li><a href="#calculator">Savings</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank">Store</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
             <div class="nav-actions">
@@ -1270,7 +1283,7 @@
         <li><a href="#process" onclick="toggleMobile()">How It Works</a></li>
         <li><a href="#reviews" onclick="toggleMobile()">Reviews</a></li>
         <li><a href="#areas" onclick="toggleMobile()">Service Areas</a></li>
-        <li><a href="#shop" onclick="toggleMobile()">Shop</a></li>
+        <li><a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank">Store</a></li>
         <li><a href="#faq" onclick="toggleMobile()">FAQ</a></li>
     </ul>
     <div class="mo-bottom">
@@ -1313,8 +1326,11 @@
                 </div>
                 <!-- Trust credential badges -->
                 <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--cream-dark);">
+                    <a href="https://share.google/ggkBzYbgntQj9up7S" target="_blank" rel="noopener" style="padding:6px 14px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;font-size:.72rem;font-weight:700;color:var(--charcoal);display:flex;align-items:center;gap:6px;text-decoration:none;transition:border-color .2s;" onmouseenter="this.style.borderColor='var(--green-light)'" onmouseleave="this.style.borderColor='var(--cream-dark)'">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                        4.9 &#9733; Google Reviews
+                    </a>
                     <div style="padding:6px 14px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;font-size:.72rem;font-weight:600;color:var(--stone);display:flex;align-items:center;gap:6px;">&#128737; Licensed &amp; Bonded</div>
-                    <div style="padding:6px 14px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;font-size:.72rem;font-weight:600;color:var(--stone);display:flex;align-items:center;gap:6px;">&#127793; Premium Materials Only</div>
                     <div style="padding:6px 14px;background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;font-size:.72rem;font-weight:600;color:var(--stone);display:flex;align-items:center;gap:6px;">&#9733; 15-Year Warranty</div>
                     <div style="padding:6px 14px;background:var(--white);border:1px solid var(--green-pale);border-radius:8px;font-size:.72rem;font-weight:700;color:var(--green-rich);display:flex;align-items:center;gap:6px;">&#128176; $0 Down Financing</div>
                 </div>
@@ -1647,30 +1663,40 @@
             <h2 style="font-family:'Fraunces',Georgia,serif;font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:16px;">Our <span style="background:linear-gradient(135deg,#c49b2a,#e0c56e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">15-Year Platinum</span><br>Protection Plan</h2>
             <p style="font-size:1.1rem;color:rgba(255,255,255,.6);max-width:560px;margin:0 auto;line-height:1.8;">Every single install. No fine print. No runaround. If something goes wrong, we make it right. Period.</p>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;align-items:start;max-width:1000px;margin:0 auto;">
-            <!-- Left column: badge -->
-            <div class="reveal" style="display:flex;justify-content:center;">
-                <div style="width:260px;height:260px;position:relative;">
-                    <!-- Animated glow -->
-                    <div style="position:absolute;inset:-8px;border-radius:50%;background:conic-gradient(from 0deg, rgba(196,155,42,.3), rgba(224,197,110,.15), rgba(196,155,42,.3), rgba(224,197,110,.15), rgba(196,155,42,.3));animation:badge-spin 8s linear infinite;filter:blur(8px);"></div>
-                    <!-- Outer ring -->
-                    <div style="position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg, #c49b2a, #e0c56e, #c49b2a, #e0c56e, #c49b2a);padding:4px;">
-                        <div style="width:100%;height:100%;border-radius:50%;background:linear-gradient(160deg, #1a2e22, #0f1f18);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;box-shadow:inset 0 4px 20px rgba(0,0,0,.4);">
-                            <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.25em;color:#c49b2a;font-weight:700;margin-bottom:6px;">&#9733; Platinum &#9733;</div>
-                            <div style="font-family:'Fraunces',Georgia,serif;font-size:3.5rem;font-weight:900;line-height:1;background:linear-gradient(160deg,#c49b2a,#e0c56e,#c49b2a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">15</div>
-                            <div style="font-size:.75rem;font-weight:700;color:#e0c56e;text-transform:uppercase;letter-spacing:.1em;">Year Full</div>
-                            <div style="font-size:.75rem;font-weight:700;color:#e0c56e;text-transform:uppercase;letter-spacing:.1em;">Coverage</div>
-                            <div style="margin-top:10px;width:50px;height:2px;background:linear-gradient(90deg,transparent,#c49b2a,transparent);"></div>
-                            <div style="margin-top:8px;font-size:.6rem;color:rgba(196,155,42,.6);letter-spacing:.2em;text-transform:uppercase;">LawnLogic Turf</div>
-                        </div>
-                    </div>
-                    <!-- Shine -->
-                    <div style="position:absolute;top:12px;left:20%;width:60%;height:25%;border-radius:50%;background:linear-gradient(to bottom,rgba(224,197,110,.2),transparent);pointer-events:none;"></div>
+        <div class="warranty-grid" style="display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;max-width:1000px;margin:0 auto;">
+            <!-- Left column: shield badge -->
+            <div class="reveal warranty-badge-wrap" style="display:flex;justify-content:center;">
+                <div style="width:220px;position:relative;">
+                    <!-- Shield badge shape via SVG -->
+                    <svg viewBox="0 0 200 240" style="width:100%;filter:drop-shadow(0 8px 24px rgba(196,155,42,.25));">
+                        <defs>
+                            <linearGradient id="shieldGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#c49b2a"/>
+                                <stop offset="50%" style="stop-color:#e0c56e"/>
+                                <stop offset="100%" style="stop-color:#c49b2a"/>
+                            </linearGradient>
+                            <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a2e22"/>
+                                <stop offset="100%" style="stop-color:#0f1f18"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Outer shield -->
+                        <path d="M100 8 L188 45 L188 130 Q188 195 100 232 Q12 195 12 130 L12 45 Z" fill="url(#shieldGold)"/>
+                        <!-- Inner shield -->
+                        <path d="M100 18 L180 52 L180 128 Q180 188 100 222 Q20 188 20 128 L20 52 Z" fill="url(#shieldBg)"/>
+                        <!-- Content -->
+                        <text x="100" y="82" text-anchor="middle" fill="#c49b2a" font-size="11" font-weight="700" letter-spacing="3" font-family="sans-serif">&#9733; PLATINUM &#9733;</text>
+                        <text x="100" y="135" text-anchor="middle" fill="#e0c56e" font-size="62" font-weight="900" font-family="Georgia,serif">15</text>
+                        <text x="100" y="158" text-anchor="middle" fill="#e0c56e" font-size="12" font-weight="700" letter-spacing="2" font-family="sans-serif">YEAR FULL</text>
+                        <text x="100" y="175" text-anchor="middle" fill="#e0c56e" font-size="12" font-weight="700" letter-spacing="2" font-family="sans-serif">COVERAGE</text>
+                        <line x1="75" y1="188" x2="125" y2="188" stroke="#c49b2a" stroke-width="1.5" opacity=".5"/>
+                        <text x="100" y="206" text-anchor="middle" fill="rgba(196,155,42,.5)" font-size="8" letter-spacing="3" font-family="sans-serif">LAWNLOGIC TURF</text>
+                    </svg>
                 </div>
             </div>
-            <!-- Center + right columns: details -->
-            <div class="reveal reveal-d1" style="grid-column:span 2;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
+            <!-- Right column: details -->
+            <div class="reveal reveal-d1 warranty-details">
+                <div class="warranty-details-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
                     <div style="padding:24px;background:rgba(255,255,255,.05);border-radius:20px;border:1px solid rgba(196,155,42,.15);backdrop-filter:blur(4px);transition:all .3s;" onmouseenter="this.style.borderColor='rgba(196,155,42,.35)';this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.borderColor='rgba(196,155,42,.15)';this.style.background='rgba(255,255,255,.05)'">
                         <div style="font-size:1.5rem;margin-bottom:10px;">&#128737;</div>
                         <div style="font-size:.95rem;font-weight:700;color:#e0c56e;margin-bottom:4px;">Full Material Coverage</div>
@@ -1830,102 +1856,19 @@
     </div>
 </section>
 
-<!-- SHOP THE BLADES COLLECTION -->
-<section style="padding:100px 0;background:var(--white);" id="shop">
+<!-- BLADES COLLECTION STORE CTA -->
+<section style="padding:80px 0;background:var(--white);" id="shop">
     <div class="container">
-        <div class="section-header">
-            <div class="sh-eyebrow">Rep the Brand</div>
-            <h2 class="sh-title">Shop the Blades<br>Collection</h2>
-            <p class="sh-desc">Handpicked gear that shows your Logic. Tees, hoodies, hats, and more &mdash; all made premium.</p>
-        </div>
-        <div class="shop-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;">
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/most-popular-the-original-blades-tee" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#eef8f2,#d5f0df);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(141,198,63,.08),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#128085;</span>
-                    <span style="position:absolute;top:12px;right:12px;background:#e74c3c;color:#fff;font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:60px;">BEST SELLER</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">The Original Blades Tee</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $18.50</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/blades-hoodie" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#f2ebe0,#eef8f2);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(141,198,63,.08),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#129509;</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">Blades Hoodie</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $38.00</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/blades-trucker-cap" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#d5f0df,#eef8f2);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(141,198,63,.08),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#129506;</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">Blades Trucker Cap</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $22.00</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/blades-pickleball-paddle-set" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#eef8f2,#f2ebe0);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(196,155,42,.08),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#127955;</span>
-                    <span style="position:absolute;top:12px;right:12px;background:var(--green-rich);color:#fff;font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:60px;">NEW</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">Blades Pickleball Paddle Set</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $64.00</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/white-blades-mug" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#eef8f2,#d5f0df);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(141,198,63,.06),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#9749;</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">White Blades Mug</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $14.00</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/golf-balls-6pcs" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#d5f0df,#f2ebe0);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(141,198,63,.06),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#9971;</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">Golf Balls, 6-Pack</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $18.00</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/lawnlogic-adidas-quarter-zip-pullover" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#f2ebe0,#d5f0df);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(196,155,42,.06),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#129526;</span>
-                    <span style="position:absolute;top:12px;right:12px;background:var(--green-wash);color:var(--green-rich);font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:60px;">PREMIUM</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">Adidas Quarter-Zip Pullover</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $68.00</div>
-                </div>
-            </a>
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic/p/grass-hole-tee" target="_blank" rel="noopener" style="background:var(--cream);border-radius:20px;border:1px solid var(--cream-dark);overflow:hidden;transition:all .35s;text-decoration:none;display:block;" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--green-light)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.08)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--cream-dark)';this.style.boxShadow=''">
-                <div style="aspect-ratio:1;background:linear-gradient(135deg,#eef8f2,#d5f0df);display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden;">
-                    <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(141,198,63,.08),transparent 70%);"></div>
-                    <span style="position:relative;z-index:1;">&#128514;</span>
-                </div>
-                <div style="padding:20px;">
-                    <div style="font-weight:700;font-size:.95rem;color:var(--charcoal);margin-bottom:4px;">Grass-hole Tee</div>
-                    <div style="font-size:.82rem;color:var(--ash);">from $21.00</div>
-                </div>
-            </a>
-        </div>
-        <div style="text-align:center;margin-top:40px;">
-            <a href="https://www.lawnlogicturf.com/store-lawnlogic" class="btn btn-lg" style="background:#8DC63F;color:#fff;box-shadow:0 4px 20px rgba(141,198,63,.3);" target="_blank">Browse All 52 Products &rarr;</a>
-            <p style="margin-top:14px;font-size:.82rem;color:var(--ash);">Free shipping on select items &bull; Fulfilled by Printful &amp; Printify</p>
+        <div style="max-width:640px;margin:0 auto;text-align:center;padding:56px 40px;background:var(--cream);border-radius:28px;border:1px solid var(--cream-dark);position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(141,198,63,.06),transparent 60%);pointer-events:none;"></div>
+            <div style="position:relative;z-index:2;">
+                <div style="font-size:3rem;margin-bottom:12px;">&#128085;</div>
+                <div style="font-family:var(--hand);font-size:1.3rem;color:var(--green-rich);margin-bottom:4px;">Rep the Brand</div>
+                <h2 style="font-family:var(--display);font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;color:var(--charcoal);line-height:1.2;margin-bottom:12px;">The Blades Collection</h2>
+                <p style="font-size:1rem;color:var(--stone);line-height:1.7;margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto;">Tees, hoodies, hats, pickleball paddles, golf balls &amp; more. Premium gear that shows your Logic.</p>
+                <a href="https://www.lawnlogicturf.com/store-lawnlogic" class="btn btn-lg" style="background:#8DC63F;color:#fff;box-shadow:0 4px 20px rgba(141,198,63,.3);font-size:1.05rem;padding:20px 48px;" target="_blank">Shop the Collection &rarr;</a>
+                <p style="margin-top:14px;font-size:.78rem;color:var(--ash);">50+ products &bull; Free shipping on select items</p>
+            </div>
         </div>
     </div>
 </section>
@@ -2174,6 +2117,23 @@
                     <div style="font-weight:800;font-size:1.05rem;color:var(--cream);">LawnLogic <span style="color:#8DC63F;">Turf</span></div>
                 </div>
                 <p class="footer-brand-desc">Family-owned in Kennesaw, GA. 20+ years of experience. Licensed, insured &amp; bonded &mdash; honest work from people who care.</p>
+                <div style="display:flex;gap:10px;margin-top:4px;">
+                    <a href="https://www.instagram.com/lawnlogicturf" target="_blank" rel="noopener" aria-label="Instagram" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .25s;color:var(--ash);" onmouseenter="this.style.background='rgba(255,255,255,.12)';this.style.color='#E1306C'" onmouseleave="this.style.background='rgba(255,255,255,.06)';this.style.color='var(--ash)'">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/LawnLogicTurfGA" target="_blank" rel="noopener" aria-label="Facebook" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .25s;color:var(--ash);" onmouseenter="this.style.background='rgba(255,255,255,.12)';this.style.color='#1877F2'" onmouseleave="this.style.background='rgba(255,255,255,.06)';this.style.color='var(--ash)'">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@lawnlogicturf" target="_blank" rel="noopener" aria-label="TikTok" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .25s;color:var(--ash);" onmouseenter="this.style.background='rgba(255,255,255,.12)';this.style.color='#fff'" onmouseleave="this.style.background='rgba(255,255,255,.06)';this.style.color='var(--ash)'">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@LawnLogicTurf" target="_blank" rel="noopener" aria-label="YouTube" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .25s;color:var(--ash);" onmouseenter="this.style.background='rgba(255,255,255,.12)';this.style.color='#FF0000'" onmouseleave="this.style.background='rgba(255,255,255,.06)';this.style.color='var(--ash)'">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://share.google/ggkBzYbgntQj9up7S" target="_blank" rel="noopener" aria-label="Google Reviews" style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .25s;color:var(--ash);" onmouseenter="this.style.background='rgba(255,255,255,.12)';this.style.color='#4285F4'" onmouseleave="this.style.background='rgba(255,255,255,.06)';this.style.color='var(--ash)'">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="currentColor"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="currentColor"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="currentColor"/></svg>
+                    </a>
+                </div>
             </div>
             <div class="footer-col"><h4>Services</h4><ul>
                 <li><a href="#services">Residential</a></li><li><a href="#services">Pet Turf</a></li>
