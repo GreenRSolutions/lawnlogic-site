@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Turf Quote | LawnLogic Turf | See Pricing for Your Yard in Seconds</title>
+    <meta name="description" content="Measure your yard, preview artificial turf, and get instant pricing — all online. LawnLogic Turf serves Kennesaw, Marietta, Acworth & all of North Georgia. 20+ years experience. Licensed, insured & bonded. Free quotes, flexible financing.">
+    <meta name="keywords" content="artificial turf cost calculator, instant turf quote, turf installation pricing Kennesaw, artificial grass cost Georgia, turf estimate near me, synthetic grass pricing Marietta">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://getturfinstant.com/instant-quote">
+
+    <meta property="og:title" content="See What Turf Costs in Your Backyard — Instantly | LawnLogic">
+    <meta property="og:description" content="Measure your yard, pick your turf, and get real pricing in minutes. No salespeople, no pressure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getturfinstant.com/instant-quote">
+
+    <!-- Google Ads Global Tag (replace AW-XXXXXXXX with real ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXX');
+
+    // Capture UTM params on load
+    (function() {
+        const params = new URLSearchParams(window.location.search);
+        const utms = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+        const stored = {};
+        utms.forEach(k => { if (params.get(k)) stored[k] = params.get(k); });
+        if (Object.keys(stored).length) sessionStorage.setItem('ll_utms', JSON.stringify(stored));
+    })();
+    function getUtms() {
+        try { return JSON.parse(sessionStorage.getItem('ll_utms')) || {}; } catch(e) { return {}; }
+    }
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Instant Turf Quote - LawnLogic","description":"Get instant pricing for artificial turf installation. Measure your yard online and see costs in seconds.","provider":{"@type":"LocalBusiness","name":"LawnLogic Turf","address":{"@type":"PostalAddress","addressLocality":"Kennesaw","addressRegion":"GA"}}}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,700;0,800;0,900;1,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --forest: #fff;
+            --green-rich: #2a7d4f;
+            --green-bright: #3cb371;
+            --green-light: #8fd4a8;
+            --green-pale: #d5f0df;
+            --green-wash: #1a2b22;
+            --cream: #2d2d2d;
+            --cream-mid: #faf6f0;
+            --cream-dark: #fff;
+            --charcoal: #2d2d2d;
+            --ink: #2d2d2d;
+            --stone: #555;
+            --ash: #888;
+            --cloud: #e8e8e8;
+            --white: #fff;
+            --gold: #2a7d4f;
+            --gold-light: #3cb371;
+            --sans: 'DM Sans', system-ui, sans-serif;
+            --display: 'Fraunces', Georgia, serif;
+            --hand: 'Caveat', cursive;
+            --ease: cubic-bezier(.4,0,.2,1);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--sans); color: var(--ink); line-height: 1.65; background: #fff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        button { cursor: pointer; border: none; font-family: inherit; background: none; }
+
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 17px 36px; border-radius: 80px; font-size: .95rem; font-weight: 700;
+            transition: all .35s var(--ease); white-space: nowrap; position: relative; overflow: hidden;
+        }
+        .btn::after {
+            content: ''; position: absolute; inset: 0; border-radius: inherit;
+            background: linear-gradient(rgba(255,255,255,.12),transparent); opacity: 0; transition: opacity .3s;
+        }
+        .btn:hover::after { opacity: 1; }
+        .btn-green {
+            background: var(--green-rich); color: #fff;
+            box-shadow: 0 4px 20px rgba(42,125,79,.35);
+        }
+        .btn-green:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(42,125,79,.45); background: #2f8a58; }
+        .btn-outline { background: transparent; color: #2a7d4f; box-shadow: inset 0 0 0 2px #2a7d4f; }
+        .btn-outline:hover { background: #eef8f2; transform: translateY(-2px); }
+        .btn-dark { background: #2a7d4f; color: #fff; box-shadow: 0 4px 20px rgba(42, 125, 79, 0.35); }
+        .btn-dark:hover { transform: translateY(-3px); background: #3cb371; }
+        .btn-lg { padding: 21px 48px; font-size: 1.08rem; }
+        .btn-full { width: 100%; }
+
+        /* ===== MINIMAL NAV (no distractions per Val's spec) ===== */
+        .lp-nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,.92); backdrop-filter: blur(16px);
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0 24px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .lp-nav-logo { display: flex; align-items: center; gap: 10px; }
+        .lp-nav-mark {
+            width: 34px; height: 34px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+        }
+        .lp-nav-mark img { width: 100%; height: 100%; object-fit: contain; }
+        .lp-nav-text { font-weight: 800; font-size: 1.1rem; color: #2d2d2d; }
+        .lp-nav-text span { color: #8DC63F; }
+        .lp-nav-right { display: flex; align-items: center; gap: 16px; }
+        .lp-nav-phone {
+            font-weight: 700; font-size: .9rem; color: #2a7d4f;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .lp-nav-phone:hover { color: #3cb371; }
+
+        /* ===== HERO ===== */
+        .lp-hero {
+            padding: 120px 0 60px;
+            background: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .lp-hero::before {
+            content: ''; position: absolute; top: -30%; left: 50%; transform: translateX(-50%);
+            width: 120%; height: 100%;
+            background: radial-gradient(ellipse, rgba(58, 107, 80, 0.15), transparent 70%);
+        }
+        .lp-hero-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+        .lp-hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px 6px 6px; background: #faf6f0;
+            border: 1px solid #e8dcc8; border-radius: 80px;
+            font-size: .8rem; font-weight: 600; color: #555;
+            margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+        .lp-hero-badge-dot {
+            width: 8px; height: 8px; background: var(--green-bright); border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+        @keyframes cta-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(42,125,79,.4)} 50%{box-shadow:0 0 0 10px rgba(42,125,79,0)} }
+        .lp-hero h1 {
+            font-family: var(--display); font-size: clamp(2.2rem,5vw,3.4rem);
+            font-weight: 900; line-height: 1.1; color: #2d2d2d; margin-bottom: 18px;
+        }
+        .lp-hero h1 em { font-style: italic; color: #2a7d4f; }
+        .lp-hero-sub {
+            font-size: 1.12rem; color: #555; line-height: 1.75; margin-bottom: 32px;
+            max-width: 560px; margin-left: auto; margin-right: auto;
+        }
+        .lp-hero-ctas {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;
+        }
+        .lp-hero-trust {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;
+        }
+        .lp-trust-chip {
+            display: flex; align-items: center; gap: 8px;
+            font-size: .82rem; font-weight: 600; color: #555;
+        }
+        .lp-trust-icon {
+            width: 32px; height: 32px; border-radius: 8px; background: #eef8f2;
+            display: flex; align-items: center; justify-content: center; font-size: .85rem;
+            color: #2a7d4f;
+        }
+
+        /* ===== HOW IT WORKS (quick 3-step) ===== */
+        .lp-steps {
+            padding: 64px 0; background: #faf6f0;
+            border-bottom: 1px solid #e8dcc8;
+        }
+        .lp-steps-title {
+            text-align: center; font-family: var(--hand); font-size: 1.4rem;
+            color: #2a7d4f; margin-bottom: 32px;
+        }
+        .lp-steps-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+            max-width: 800px; margin: 0 auto;
+        }
+        .lp-step {
+            text-align: center; padding: 24px 16px;
+            border-radius: 20px; background: #fff;
+            border: 1px solid #e8dcc8;
+        }
+        .lp-step-num {
+            width: 40px; height: 40px; border-radius: 50%; margin: 0 auto 12px;
+            background: var(--green-rich); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: .95rem;
+            box-shadow: 0 3px 10px rgba(42,125,79,.25);
+        }
+        .lp-step-icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .lp-step h4 { font-size: .92rem; font-weight: 700; color: #2d2d2d; margin-bottom: 4px; }
+        .lp-step p { font-size: .78rem; color: #888; line-height: 1.5; }
+
+        /* ===== QUOTE TOOL EMBED ===== */
+        .lp-tool {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .lp-tool-header {
+            text-align: center; margin-bottom: 32px;
+        }
+        .lp-tool-header h2 {
+            font-family: var(--display); font-size: clamp(1.6rem,3vw,2.2rem);
+            font-weight: 800; color: #2d2d2d; margin-bottom: 8px;
+        }
+        .lp-tool-header p { font-size: .95rem; color: #555; max-width: 500px; margin: 0 auto; }
+        .lp-tool-cards {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+            max-width: 800px; margin: 40px auto 0;
+        }
+        .lp-tool-card {
+            text-align: center; padding: 40px 24px; border-radius: 20px;
+            background: #fff; border: 1px solid #e8dcc8;
+            box-shadow: 0 8px 32px rgba(0,0,0,.08);
+            transition: all .4s cubic-bezier(.34,1.56,.64,1);
+            text-decoration: none; display: block;
+        }
+        .lp-tool-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(42, 125, 79, .15);
+            border-color: #2a7d4f;
+        }
+        .lp-tool-card-icon { font-size: 2.4rem; margin-bottom: 16px; }
+        .lp-tool-card h4 { font-family: var(--display); font-size: 1.05rem; font-weight: 800; color: #2d2d2d; margin-bottom: 8px; }
+        .lp-tool-card p { font-size: .82rem; color: #888; line-height: 1.6; margin-bottom: 16px; }
+        .lp-tool-card-link {
+            display: inline-block; font-size: .82rem; font-weight: 700;
+            color: #2a7d4f; letter-spacing: .02em;
+        }
+
+        /* ===== ALTERNATIVE: SCHEDULE ESTIMATE ===== */
+        .lp-alt {
+            padding: 64px 0; background: #faf6f0;
+            text-align: center;
+            border-top: 1px solid #e8dcc8;
+        }
+        .lp-alt-inner { max-width: 560px; margin: 0 auto; }
+        .lp-alt h3 {
+            font-family: var(--display); font-size: 1.4rem; font-weight: 800;
+            color: #2d2d2d; margin-bottom: 10px;
+        }
+        .lp-alt p { font-size: .92rem; color: #555; margin-bottom: 24px; line-height: 1.7; }
+
+        /* ===== BENEFITS ===== */
+        .lp-benefits {
+            padding: 80px 0; background: #fff;
+        }
+        .lp-benefits-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+            margin-top: 36px;
+        }
+        .lp-benefit {
+            background: #faf6f0; border: 1px solid #e8dcc8;
+            border-radius: 20px; padding: 32px 24px;
+            transition: all .35s var(--ease);
+        }
+        .lp-benefit:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(42, 125, 79, .1); border-color: #2a7d4f; }
+        .lp-benefit-icon {
+            width: 48px; height: 48px; border-radius: 12px; margin-bottom: 16px;
+            background: #eef8f2; border: 1px solid #d5f0df;
+            display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+            color: #2a7d4f;
+        }
+        .lp-benefit h4 { font-size: 1rem; font-weight: 700; color: #2d2d2d; margin-bottom: 6px; }
+        .lp-benefit p { font-size: .85rem; color: #888; line-height: 1.6; }
+
+        /* ===== REVIEWS (scrolling marquee) ===== */
+        .lp-reviews { padding: 80px 0; background: #faf6f0; overflow: hidden; }
+        .lp-reviews-marquee {
+            overflow: hidden; position: relative; margin-top: 36px;
+        }
+        .lp-reviews-marquee::before, .lp-reviews-marquee::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
+        }
+        .lp-reviews-marquee::before { left: 0; background: linear-gradient(to right, #faf6f0, transparent); }
+        .lp-reviews-marquee::after { right: 0; background: linear-gradient(to left, #faf6f0, transparent); }
+        .lp-reviews-track {
+            display: flex; gap: 20px; width: max-content;
+            animation: lp-review-scroll 45s linear infinite;
+        }
+        .lp-reviews-track:hover { animation-play-state: paused; }
+        @keyframes lp-review-scroll {
+            0% { transform: translateX(-16.66%); }
+            100% { transform: translateX(-66.66%); }
+        }
+        .lp-review {
+            background: #fff; border: 1px solid #e8dcc8;
+            border-radius: 20px; padding: 28px; position: relative;
+            transition: all .35s var(--ease);
+            min-width: 320px; max-width: 360px; flex-shrink: 0;
+        }
+        .lp-review::before {
+            content: '\201C'; position: absolute; top: 16px; right: 20px;
+            font-family: var(--display); font-size: 3.5rem; color: rgba(42, 125, 79, 0.15); line-height: 1; pointer-events: none;
+        }
+        .lp-review:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(42, 125, 79, .15); }
+        .lp-review-stars { color: #f4a930; font-size: .85rem; margin-bottom: 12px; letter-spacing: 2px; }
+        .lp-review-text { font-size: .88rem; color: #555; line-height: 1.7; margin-bottom: 16px; }
+        .lp-review-author { display: flex; align-items: center; gap: 10px; }
+        .lp-review-avatar {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: linear-gradient(135deg, #8fd4a8, #3cb371);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: #fff; font-size: .78rem;
+        }
+        .lp-review-name { font-weight: 700; font-size: .82rem; color: #2d2d2d; }
+        .lp-review-loc { font-size: .72rem; color: #888; }
+
+        /* ===== BEFORE/AFTER ===== */
+        .lp-ba { padding: 80px 0; background: #fff; }
+        .lp-ba-container {
+            max-width: 700px; margin: 36px auto 0;
+            border-radius: 24px; overflow: hidden; aspect-ratio: 16/9;
+            position: relative; user-select: none;
+            box-shadow: 0 16px 48px rgba(0,0,0,.1);
+        }
+        .lp-ba-side {
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            font-family: var(--display); font-size: 1.2rem; font-weight: 800;
+        }
+        .lp-ba-before { background: url('images/ba-before.png') center/cover no-repeat; color: rgba(255,255,255,.9); z-index: 1; }
+        .lp-ba-after {
+            background: url('images/ba-after.png') center/cover no-repeat;
+            color: rgba(255,255,255,.95); z-index: 2;
+            clip-path: inset(0 50% 0 0);
+        }
+        .lp-ba-label {
+            padding: 6px 16px; border-radius: 80px; font-size: .75rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .08em; background: rgba(0,0,0,.25);
+        }
+        .lp-ba-line {
+            position: absolute; top: 0; bottom: 0; width: 3px; background: #fff;
+            left: 50%; transform: translateX(-50%); z-index: 10; pointer-events: none;
+            box-shadow: 0 0 10px rgba(0,0,0,.3);
+        }
+        .lp-ba-handle {
+            position: absolute; top: 50%; left: 50%; z-index: 11;
+            transform: translate(-50%,-50%); cursor: ew-resize;
+            width: 44px; height: 44px; border-radius: 50%; background: #2a7d4f;
+            box-shadow: 0 4px 16px rgba(0,0,0,.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: .8rem; color: #fff; font-weight: 800;
+        }
+        .lp-ba-handle::before { content: '\2039\2039  \203A\203A'; letter-spacing: -2px; }
+
+        /* ===== FAQ ===== */
+        .lp-faq { padding: 80px 0; background: #faf6f0; }
+        .lp-faq-list { max-width: 680px; margin: 36px auto 0; }
+        .lp-faq-item {
+            border: 1px solid #e8dcc8; border-radius: 14px; margin-bottom: 8px;
+            overflow: hidden; transition: border-color .3s;
+        }
+        .lp-faq-item:hover { border-color: #2a7d4f; }
+        .lp-fq {
+            width: 100%; padding: 18px 22px; display: flex; justify-content: space-between;
+            align-items: center; font-size: .92rem; font-weight: 600; color: #2d2d2d; text-align: left;
+        }
+        .lp-fq:hover { color: #2a7d4f; }
+        .lp-fq-icon {
+            width: 26px; height: 26px; border-radius: 50%; background: #eef8f2;
+            display: flex; align-items: center; justify-content: center;
+            color: #2a7d4f; font-size: 1rem; flex-shrink: 0;
+            transition: transform .3s var(--ease);
+        }
+        .lp-fa { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+        .lp-fa-inner { padding: 0 22px 18px; font-size: .88rem; color: var(--stone); line-height: 1.75; }
+        .lp-fa-inner a { color: var(--green-rich); font-weight: 600; }
+        .lp-faq-item.open .lp-fa { max-height: 400px; }
+        .lp-faq-item.open .lp-fq-icon { transform: rotate(45deg); }
+
+        /* ===== FINAL CTA ===== */
+        .lp-final {
+            padding: 100px 24px; text-align: center; position: relative; overflow: hidden;
+            background: linear-gradient(160deg, #fff, #faf6f0);
+            color: var(--cream);
+        }
+        .lp-final::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(60,179,113,.1), transparent 60%);
+        }
+        .lp-final-inner { position: relative; z-index: 2; max-width: 580px; margin: 0 auto; }
+        .lp-final h2 {
+            font-family: var(--display); font-size: clamp(1.8rem,3.5vw,2.5rem);
+            font-weight: 800; line-height: 1.2; margin-bottom: 14px;
+        }
+        .lp-final p { font-size: 1rem; color: var(--stone); margin-bottom: 32px; line-height: 1.75; }
+        .lp-final-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+        .lp-final-sig { margin-top: 24px; font-family: var(--hand); font-size: 1.2rem; color: #2a7d4f; }
+
+        /* ===== STICKY MOBILE CTA ===== */
+        .sticky-cta {
+            display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+            background: #fff; border-top: 1px solid #e8e8e8;
+            padding: 12px 16px; box-shadow: 0 -4px 20px rgba(0,0,0,.4);
+        }
+        .sticky-cta-inner {
+            display: flex; gap: 10px; max-width: 480px; margin: 0 auto;
+        }
+        .sticky-cta .btn { flex: 1; padding: 14px 16px; font-size: .88rem; }
+
+        /* ===== SECTION HEADER ===== */
+        .lp-sh { text-align: center; margin-bottom: 8px; }
+        .lp-sh-eyebrow { font-family: var(--hand); font-size: 1.3rem; color: #2a7d4f; }
+        .lp-sh-title {
+            font-family: var(--display); font-size: clamp(1.6rem,3vw,2.2rem);
+            font-weight: 800; color: var(--cream); line-height: 1.2; margin-top: 4px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .lp-steps-grid { grid-template-columns: 1fr; max-width: 360px; }
+            .lp-benefits-grid { grid-template-columns: 1fr; }
+            /* reviews are now a scrolling marquee, no grid breakpoint needed */
+            .lp-tool-cards { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+            .sticky-cta { display: block; }
+            body { padding-bottom: 72px; }
+            .lp-hero-ctas { flex-direction: column; align-items: center; }
+            .lp-hero-ctas .btn { width: 100%; max-width: 340px; }
+            .lp-final-btns { flex-direction: column; align-items: center; }
+            .lp-final-btns .btn { width: 100%; max-width: 340px; }
+            .lp-hero-trust { gap: 12px; }
+            .lp-nav-phone span.phone-text { display: none; }
+        }
+        @media (max-width: 480px) {
+            .lp-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- MINIMAL NAV -->
+<nav class="lp-nav">
+    <a href="https://www.lawnlogicturf.com" class="lp-nav-logo">
+        <div class="lp-nav-mark">
+            <img src="images/logo.png" alt="LawnLogic Turf Logo">
+        </div>
+        <div class="lp-nav-text">Lawn<span>Logic</span></div>
+    </a>
+    <div class="lp-nav-right">
+        <a href="tel:7067018873" class="lp-nav-phone" onclick="gtag('event','phone_click');">
+            &#128222; <span class="phone-text">(706) 701-8873</span>
+        </a>
+        <a href="#quote-tool" class="btn btn-green" style="padding:10px 22px;font-size:.82rem;" onclick="gtag('event','quote_start');">Start Instant Quote</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="lp-hero">
+    <div class="lp-hero-inner">
+        <div class="lp-hero-badge">
+            <span class="lp-hero-badge-dot"></span>
+            Family-Owned &bull; Kennesaw, GA
+        </div>
+        <h1>See What Artificial Turf Costs in <em>Your Backyard</em> &mdash; Instantly</h1>
+        <p style="font-family:'Caveat',cursive;font-size:1.4rem;color:var(--green-bright);margin-bottom:4px;font-style:italic;opacity:.9;">Good grass, don't cut it.</p>
+        <p class="lp-hero-sub">Measure your yard, preview turf styles, and get real pricing in minutes. No salespeople, no waiting, no pressure.</p>
+        <div class="lp-hero-ctas">
+            <a href="#quote-tool" class="btn btn-lg btn-green" onclick="gtag('event','quote_start');">
+                Start Instant Quote &rarr;
+            </a>
+            <a href="#schedule" class="btn btn-lg btn-outline" onclick="gtag('event','schedule_estimate_click');">
+                Schedule Free Estimate
+            </a>
+        </div>
+        <div class="lp-hero-trust">
+            <div class="lp-trust-chip"><span class="lp-trust-icon">&#9733;</span> 4.9 Avg &bull; 1,000+ Customers</div>
+            <div class="lp-trust-chip"><span class="lp-trust-icon">&#128737;</span> Licensed &amp; Insured</div>
+            <div class="lp-trust-chip"><span class="lp-trust-icon">&#9889;</span> 72-Hour Install Available</div>
+            <div class="lp-trust-chip"><span class="lp-trust-icon">&#128170;</span> 20+ Yrs Experience &bull; Bonded</div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="lp-steps">
+    <div class="container">
+        <div class="lp-steps-title">How it works &mdash; 3 easy steps</div>
+        <div class="lp-steps-grid">
+            <div class="lp-step">
+                <div class="lp-step-num">1</div>
+                <div class="lp-step-icon">&#128506;</div>
+                <h4>Measure Your Yard</h4>
+                <p>Draw on the map to outline your project area</p>
+            </div>
+            <div class="lp-step">
+                <div class="lp-step-num">2</div>
+                <div class="lp-step-icon">&#127912;</div>
+                <h4>Pick Your Turf &amp; Package</h4>
+                <p>Choose from Essential, Signature, or Elite tiers</p>
+            </div>
+            <div class="lp-step">
+                <div class="lp-step-num">3</div>
+                <div class="lp-step-icon">&#128178;</div>
+                <h4>Get Instant Pricing</h4>
+                <p>See your estimated cost &mdash; no waiting for a callback</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE TOOL CTA -->
+<section class="lp-tool" id="quote-tool">
+    <div class="container">
+        <div class="lp-tool-header">
+            <h2>Your Yard, Your Way</h2>
+            <p>Three ways to get started — pick the one that fits you best.</p>
+        </div>
+        <div class="lp-tool-cards">
+            <a href="https://www.getturfinstant.com/quote" target="_blank" class="lp-tool-card" onclick="gtag('event','quote_start');">
+                <div class="lp-tool-card-icon">&#128178;</div>
+                <h4>Instant Quote</h4>
+                <p>Get real pricing for your yard in under 2 minutes. No waiting, no callbacks.</p>
+                <span class="lp-tool-card-link">Get My Price &rarr;</span>
+            </a>
+            <a href="https://www.getturfinstant.com/designer" target="_blank" class="lp-tool-card" onclick="gtag('event','designer_start');">
+                <div class="lp-tool-card-icon">&#127912;</div>
+                <h4>Design My Yard</h4>
+                <p>Draw on a satellite map, preview turf styles, and visualize your project.</p>
+                <span class="lp-tool-card-link">Open Designer &rarr;</span>
+            </a>
+            <a href="https://www.getturfinstant.com" target="_blank" class="lp-tool-card" onclick="gtag('event','tool_start');">
+                <div class="lp-tool-card-icon">&#128640;</div>
+                <h4>Explore the Tool</h4>
+                <p>Browse turf options, see packages, and learn what's possible for your space.</p>
+                <span class="lp-tool-card-link">Get Started Free &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ALTERNATIVE: SCHEDULE ESTIMATE -->
+<section class="lp-alt" id="schedule">
+    <div class="lp-alt-inner">
+        <h3>Prefer to Talk to a Person?</h3>
+        <p>No problem. Schedule a free on-site estimate and Dusty will come out, walk your yard, and give you an honest quote &mdash; no pressure, no obligation.</p>
+        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+            <a href="tel:7067018873" class="btn btn-dark" onclick="gtag('event','phone_click');">
+                &#128222; Call (706) 701-8873
+            </a>
+            <a href="https://www.getturfinstant.com/quote" class="btn btn-outline" target="_blank" onclick="gtag('event','schedule_estimate_click');">
+                Schedule Free Estimate &rarr;
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="lp-benefits">
+    <div class="container">
+        <div class="lp-sh">
+            <div class="lp-sh-eyebrow">Why Turf?</div>
+            <h2 class="lp-sh-title">Benefits That Pay for Themselves</h2>
+        </div>
+        <div class="lp-benefits-grid">
+            <div class="lp-benefit">
+                <div class="lp-benefit-icon">&#128167;</div>
+                <h4>$0 Water Bill Impact</h4>
+                <p>No irrigation needed. Save $40&ndash;100/month on water alone.</p>
+            </div>
+            <div class="lp-benefit">
+                <div class="lp-benefit-icon">&#9200;</div>
+                <h4>200+ Hours Back Per Year</h4>
+                <p>No mowing, edging, fertilizing, or reseeding. Your weekends are yours again.</p>
+            </div>
+            <div class="lp-benefit">
+                <div class="lp-benefit-icon">&#127793;</div>
+                <h4>Green 365 Days a Year</h4>
+                <p>Looks perfect through Georgia summers, winters, and everything in between.</p>
+            </div>
+            <div class="lp-benefit">
+                <div class="lp-benefit-icon">&#128054;</div>
+                <h4>Pet &amp; Kid Safe</h4>
+                <p>Antimicrobial, no mud, incredible drainage. Built for real families.</p>
+            </div>
+            <div class="lp-benefit">
+                <div class="lp-benefit-icon">&#127919;</div>
+                <h4>15&ndash;25 Year Lifespan</h4>
+                <p>Premium UV-resistant turf that won't fade, mat, or fall apart.</p>
+            </div>
+            <div class="lp-benefit">
+                <div class="lp-benefit-icon">&#128176;</div>
+                <h4>Flexible Financing</h4>
+                <p>Transform your yard now, pay over time. Multiple vetted lending partners to fit every budget. <a href="https://www.enhancify.com/lawnlogicturf" target="_blank" style="color:var(--green-rich);font-weight:600;">Apply now &rarr;</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="lp-ba">
+    <div class="container">
+        <div class="lp-sh">
+            <div class="lp-sh-eyebrow">See the Difference</div>
+            <h2 class="lp-sh-title">Drag to See the Transformation</h2>
+        </div>
+        <div class="lp-ba-container" id="lpBa">
+            <div class="lp-ba-side lp-ba-before"><span class="lp-ba-label">Before</span></div>
+            <div class="lp-ba-side lp-ba-after" id="lpBaAfter"><span class="lp-ba-label">After &mdash; LawnLogic</span></div>
+            <div class="lp-ba-line" id="lpBaLine"></div>
+            <div class="lp-ba-handle" id="lpBaHandle"></div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="lp-reviews">
+    <div class="container">
+        <div class="lp-sh">
+            <div class="lp-sh-eyebrow">Real Families, Real Results</div>
+            <h2 class="lp-sh-title">What Our Neighbors Say</h2>
+        </div>
+    </div>
+    <div class="lp-reviews-marquee">
+        <div class="lp-reviews-track">
+            <!-- Set 1 (starts on review 3 — different from homepage) -->
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"After two years fighting Georgia clay, I finally pulled the trigger. Dusty was straight-up about pricing and his crew left it spotless. Best home decision we've made."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">DT</div><div><div class="lp-review-name">David T.</div><div class="lp-review-loc">Woodstock, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"Our HOA is picky, but everyone loved the result. LawnLogic handled the whole front and backyard in one day. It's been 8 months and it still looks perfect."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">KR</div><div><div class="lp-review-name">Karen R.</div><div class="lp-review-loc">Acworth, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"Best money I've spent on the house. My water bill dropped, my weekends are free, and the kids play outside way more now. Dusty and his crew are the real deal."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">ML</div><div><div class="lp-review-name">Mike L.</div><div class="lp-review-loc">Canton, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"Got three quotes. LawnLogic won on price AND on how they treated us. Dusty texted updates both days. The yard is unbelievable."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">JM</div><div><div class="lp-review-name">Jason M.</div><div class="lp-review-loc">Kennesaw, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"The online tool sold me. I could see what my yard would look like before anyone came out. Done in one day. Neighbors keep asking who did it."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">SB</div><div><div class="lp-review-name">Sarah B.</div><div class="lp-review-loc">Marietta, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"I was skeptical about artificial turf, but this looks better than real grass ever did. My neighbors thought we resodded. LawnLogic exceeded every expectation."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">AP</div><div><div class="lp-review-name">Amanda P.</div><div class="lp-review-loc">Roswell, GA</div></div></div>
+            </div>
+            <!-- Set 2 (duplicate for seamless loop) -->
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"After two years fighting Georgia clay, I finally pulled the trigger. Dusty was straight-up about pricing and his crew left it spotless. Best home decision we've made."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">DT</div><div><div class="lp-review-name">David T.</div><div class="lp-review-loc">Woodstock, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"Our HOA is picky, but everyone loved the result. LawnLogic handled the whole front and backyard in one day. It's been 8 months and it still looks perfect."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">KR</div><div><div class="lp-review-name">Karen R.</div><div class="lp-review-loc">Acworth, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"Best money I've spent on the house. My water bill dropped, my weekends are free, and the kids play outside way more now. Dusty and his crew are the real deal."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">ML</div><div><div class="lp-review-name">Mike L.</div><div class="lp-review-loc">Canton, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"Got three quotes. LawnLogic won on price AND on how they treated us. Dusty texted updates both days. The yard is unbelievable."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">JM</div><div><div class="lp-review-name">Jason M.</div><div class="lp-review-loc">Kennesaw, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"The online tool sold me. I could see what my yard would look like before anyone came out. Done in one day. Neighbors keep asking who did it."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">SB</div><div><div class="lp-review-name">Sarah B.</div><div class="lp-review-loc">Marietta, GA</div></div></div>
+            </div>
+            <div class="lp-review">
+                <div class="lp-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="lp-review-text">"I was skeptical about artificial turf, but this looks better than real grass ever did. My neighbors thought we resodded. LawnLogic exceeded every expectation."</p>
+                <div class="lp-review-author"><div class="lp-review-avatar">AP</div><div><div class="lp-review-name">Amanda P.</div><div class="lp-review-loc">Roswell, GA</div></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="lp-faq">
+    <div class="container">
+        <div class="lp-sh">
+            <div class="lp-sh-eyebrow">Quick Answers</div>
+            <h2 class="lp-sh-title">Common Questions</h2>
+        </div>
+        <div class="lp-faq-list">
+            <div class="lp-faq-item open"><button class="lp-fq" onclick="toggleFaq(this)">How accurate is the instant quote?<span class="lp-fq-icon">+</span></button><div class="lp-fa"><div class="lp-fa-inner">The instant quote gives you a strong ballpark based on your measured square footage and selected package. Final pricing is confirmed during your free on-site consultation, where we account for grading, drainage, and any site-specific factors. Most final quotes are very close to the online estimate.</div></div></div>
+            <div class="lp-faq-item"><button class="lp-fq" onclick="toggleFaq(this)">How much does turf cost per square foot?<span class="lp-fq-icon">+</span></button><div class="lp-fa"><div class="lp-fa-inner">Installed pricing typically ranges $8&ndash;$15 per sq ft depending on turf type, base prep, and project complexity. The instant quote tool gives you a personalized estimate based on your actual yard. <a href="#quote-tool">Try it now.</a></div></div></div>
+            <div class="lp-faq-item"><button class="lp-fq" onclick="toggleFaq(this)">Do I have to commit after getting a quote?<span class="lp-fq-icon">+</span></button><div class="lp-fa"><div class="lp-fa-inner">Nope. Zero obligation. The instant quote is 100% free. If you want to move forward, we'll schedule a consultation. If not, no pressure at all.</div></div></div>
+            <div class="lp-faq-item"><button class="lp-fq" onclick="toggleFaq(this)">How fast can you install?<span class="lp-fq-icon">+</span></button><div class="lp-fa"><div class="lp-fa-inner">Most residential yards are done in 1&ndash;2 days. We offer 72-hour install availability for projects that need to move fast.</div></div></div>
+            <div class="lp-faq-item"><button class="lp-fq" onclick="toggleFaq(this)">Is turf safe for my dog?<span class="lp-fq-icon">+</span></button><div class="lp-fa"><div class="lp-fa-inner">Built for them. Antimicrobial infill, 30+ in/hr drainage, no mud. Most of our customers are dog families.</div></div></div>
+            <div class="lp-faq-item"><button class="lp-fq" onclick="toggleFaq(this)">Do you offer financing?<span class="lp-fq-icon">+</span></button><div class="lp-fa"><div class="lp-fa-inner">Yes! We've partnered with multiple vetted lending partners so you can find the best rate for your situation. Apply directly: <a href="https://www.acornfinance.com/pre-qualify/?d=24HVU&utm_medium=web_pre_qual_link" target="_blank">Acorn Finance</a> &bull; <a href="https://portal.foundationfinance.com/links/sMYxUDhNy2p94jxsqxjyuTh7FJ9RbNN49KRMTSDj7RE=" target="_blank">Foundation Finance</a> &bull; <a href="https://www.enhancify.com/lawnlogicturf" target="_blank">Enhancify</a> &bull; <a href="https://www.hfsfinancial.net/promo/6949a55c5aca1ccc8a41edf3/" target="_blank">HFS Financial</a></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="lp-final">
+    <div class="lp-final-inner">
+        <h2>Ready to See What<br>Your Yard Could Look Like?</h2>
+        <p>Get your instant quote in minutes. No pressure, no salespeople &mdash; just real pricing from a local family that does great work.</p>
+        <div class="lp-final-btns">
+            <a href="#quote-tool" class="btn btn-lg btn-green" onclick="gtag('event','quote_start');">Start Instant Quote &rarr;</a>
+            <a href="tel:7067018873" class="btn btn-lg" style="color:rgba(255,255,255,.85);border:2px solid rgba(255,255,255,.2);border-radius:80px;" onclick="gtag('event','phone_click');">
+                &#128222; Call Dusty
+            </a>
+        </div>
+        <p class="lp-final-sig">&mdash; The Broadheads &amp; the LawnLogic family</p>
+    </div>
+</section>
+
+<!-- MINI FOOTER -->
+<footer style="background:#fff;color:#888;text-align:center;padding:24px;font-size:.78rem;border-top:1px solid #e8e8e8;">
+    <div style="margin-bottom:8px;">
+        <a href="terms-of-service.html" style="color:#888;margin:0 6px;">Terms</a> &bull;
+        <a href="privacy-policy.html" style="color:#888;margin:0 6px;">Privacy</a> &bull;
+        <a href="nda.html" style="color:#888;margin:0 6px;">Confidentiality</a> &bull;
+        <a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank" style="color:#888;margin:0 6px;">Merch Store</a>
+    </div>
+    &copy; 2026 LawnLogic Turf &bull; Family-Owned in Kennesaw, GA &bull; Licensed &amp; Insured
+    <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--green-bright);font-style:italic;margin-top:8px;opacity:.8;">Good grass, don't cut it.</p>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+    <div class="sticky-cta-inner">
+        <a href="tel:7067018873" class="btn btn-green" style="flex:1;text-align:center;animation:cta-pulse 2s ease-in-out infinite;" onclick="gtag('event','phone_click');">&#128222; Call for Free Quote</a>
+        <a href="sms:7067018873" class="btn btn-outline" style="flex:1;text-align:center;" onclick="gtag('event','message_click');">&#128172; Message Us</a>
+    </div>
+</div>
+
+<script>
+// FAQ
+function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.lp-faq-item').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) window.scrollTo({ top: t.offsetTop - 68, behavior: 'smooth' });
+    });
+});
+
+// Before/After slider
+(function() {
+    const c = document.getElementById('lpBa');
+    const after = document.getElementById('lpBaAfter');
+    const line = document.getElementById('lpBaLine');
+    const handle = document.getElementById('lpBaHandle');
+    let dragging = false;
+    function setPos(x) {
+        const r = c.getBoundingClientRect();
+        let p = ((x - r.left) / r.width) * 100;
+        p = Math.max(5, Math.min(95, p));
+        after.style.clipPath = `inset(0 ${100-p}% 0 0)`;
+        line.style.left = p+'%';
+        handle.style.left = p+'%';
+    }
+    handle.addEventListener('mousedown', () => dragging = true);
+    handle.addEventListener('touchstart', () => dragging = true, {passive:true});
+    window.addEventListener('mouseup', () => dragging = false);
+    window.addEventListener('touchend', () => dragging = false);
+    window.addEventListener('mousemove', e => { if(dragging) setPos(e.clientX); });
+    window.addEventListener('touchmove', e => { if(dragging) setPos(e.touches[0].clientX); }, {passive:true});
+    c.addEventListener('click', e => setPos(e.clientX));
+})();
+
+// Track scroll depth to quote tool
+(function() {
+    let tracked = false;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting && !tracked) {
+                gtag('event', 'quote_tool_visible');
+                tracked = true;
+            }
+        });
+    }, { threshold: 0.3 });
+    const el = document.getElementById('quote-tool');
+    if (el) observer.observe(el);
+})();
+</script>
+
+<!-- CHAT WIDGET -->
+<style>
+.chat-fab{position:fixed;bottom:90px;right:20px;width:60px;height:60px;border-radius:50%;background:#2a7d4f;color:#fff;border:none;cursor:pointer;z-index:9998;box-shadow:0 4px 20px rgba(42, 125, 79,.35);display:flex;align-items:center;justify-content:center;font-size:1.5rem;transition:all .3s;animation:cta-pulse 2.5s ease-in-out infinite}
+.chat-fab:hover{transform:scale(1.1)}.chat-fab .badge{position:absolute;top:-2px;right:-2px;width:18px;height:18px;border-radius:50%;background:#e74c3c;font-size:.65rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.chat-box{position:fixed;bottom:90px;right:20px;width:360px;max-height:520px;background:#fff;border-radius:20px;box-shadow:0 12px 48px rgba(0,0,0,.1);z-index:9999;display:none;flex-direction:column;overflow:hidden;font-family:var(--body)}
+.chat-box.open{display:flex}.chat-head{background:#2a7d4f;color:#fff;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.chat-head-info{display:flex;align-items:center;gap:10px}.chat-head-avatar{width:36px;height:36px;border-radius:50%;background:#eef8f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+.chat-head-name{font-weight:700;font-size:.9rem}.chat-head-status{font-size:.72rem;opacity:.8}
+.chat-close{background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;opacity:.7}.chat-close:hover{opacity:1}
+.chat-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;max-height:340px}
+.chat-msg{max-width:82%;padding:12px 16px;border-radius:18px;font-size:.85rem;line-height:1.5}
+.chat-msg.bot{background:#faf6f0;color:#2d2d2d;align-self:flex-start;border-bottom-left-radius:4px}
+.chat-msg.user{background:#2a7d4f;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.chat-msg a{color:#2a7d4f;font-weight:600;text-decoration:underline}.chat-msg.user a{color:#fff}
+.chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px}
+.chat-quick button{padding:8px 14px;border-radius:60px;border:1px solid #eef8f2;background:#eef8f2;color:#2a7d4f;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s}
+.chat-quick button:hover{background:#2a7d4f;color:#fff}
+.chat-input-bar{display:flex;gap:8px;padding:12px 16px;border-top:1px solid #e8dcc8}
+.chat-input-bar input{flex:1;padding:10px 14px;border-radius:60px;border:1px solid #e8dcc8;background:#faf6f0;color:#2d2d2d;font-size:.85rem;outline:none}.chat-input-bar input::placeholder{color:#888}.chat-input-bar input:focus{border-color:#2a7d4f}
+.chat-input-bar button{width:40px;height:40px;border-radius:50%;background:#2a7d4f;color:#fff;border:none;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center}
+@media(max-width:480px){.chat-box{width:calc(100vw - 24px);right:12px;bottom:80px;max-height:70vh}.chat-fab{bottom:80px;right:14px}}
+</style>
+<button class="chat-fab" id="chatFab" onclick="toggleChat()">&#128172;<span class="badge">1</span></button>
+<div class="chat-box" id="chatBox">
+    <div class="chat-head"><div class="chat-head-info"><div class="chat-head-avatar">D</div><div><div class="chat-head-name">LawnLogic Chat</div><div class="chat-head-status">&#9679; Typically replies instantly</div></div></div><button class="chat-close" onclick="toggleChat()">&times;</button></div>
+    <div class="chat-msgs" id="chatMsgs"><div class="chat-msg bot">Hey! &#128075; I'm the LawnLogic assistant. Ask me about pricing, services, or get a free quote!</div></div>
+    <div class="chat-quick" id="chatQuick">
+        <button onclick="quickQ(this)">How much does turf cost?</button>
+        <button onclick="quickQ(this)">Do you serve my area?</button>
+        <button onclick="quickQ(this)">Do you offer financing?</button>
+        <button onclick="quickQ(this)">I want a free quote</button>
+    </div>
+    <div class="chat-input-bar"><input type="text" id="chatIn" placeholder="Type your message..." onkeypress="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">&#10148;</button></div>
+</div>
+<script>
+(function(){
+const R={"cost|price|how much|pricing":"Most projects run <strong>$8–$15/sq ft</strong> fully installed. <a href='https://www.getturfinstant.com/quote' target='_blank'>Get your free instant quote</a> — takes 2 min!","area|serve|city|kennesaw|marietta|acworth|woodstock|canton|roswell":"We serve all of <strong>North Georgia</strong> — 45+ cities including Kennesaw, Marietta, Acworth, Woodstock, Canton, Roswell, Alpharetta & more!","financ|payment|pay|loan":"Yes! We have vetted lending partners: <a href='https://www.enhancify.com/lawnlogicturf' target='_blank'>Enhancify</a> • <a href='https://www.acornfinance.com/pre-qualify/?d=24HVU&utm_medium=web_pre_qual_link' target='_blank'>Acorn Finance</a> • <a href='https://www.hfsfinancial.net/promo/6949a55c5aca1ccc8a41edf3/' target='_blank'>HFS Financial</a>","dog|pet|safe":"100% pet-safe! Antimicrobial infill, 30+ in/hr drainage, no mud. Your pup will love it!","quote|estimate|free":"Two options:<br>&#128073; <a href='https://www.getturfinstant.com/quote' target='_blank'>Instant online quote</a> (2 min)<br>&#128222; Call <a href='tel:7067018873'>(706) 701-8873</a>","hello|hi|hey":"Hey! &#128075; How can I help? I know pricing, services, financing — or I can get you a free quote!","thank|awesome|great":"You're welcome! &#128154; Call <a href='tel:7067018873'>(706) 701-8873</a> anytime!"};
+window.toggleChat=function(){const b=document.getElementById('chatBox'),f=document.getElementById('chatFab');b.classList.toggle('open');if(b.classList.contains('open')){f.style.display='none';document.getElementById('chatIn').focus();gtag('event','chat_open')}else{f.style.display='flex'}};
+window.quickQ=function(b){const t=b.textContent;addMsg(t,'user');b.remove();setTimeout(()=>botReply(t),600)};
+window.sendChat=function(){const i=document.getElementById('chatIn'),t=i.value.trim();if(!t)return;addMsg(t,'user');i.value='';setTimeout(()=>botReply(t),600)};
+function addMsg(t,type){const m=document.getElementById('chatMsgs'),d=document.createElement('div');d.className='chat-msg '+type;d.innerHTML=t;m.appendChild(d);m.scrollTop=m.scrollHeight}
+function botReply(t){const l=t.toLowerCase();let r=null;for(const[p,v]of Object.entries(R)){if(p.split('|').some(k=>l.includes(k))){r=v;break}}if(!r)r="Great question! For the best answer:<br>&#128222; <a href='tel:7067018873'>(706) 701-8873</a><br>&#128172; <a href='sms:7067018873'>Text us</a><br>Or <a href='https://www.getturfinstant.com/quote' target='_blank'>get a free quote online</a>.";addMsg(r,'bot');gtag('event','chat_message',{event_label:t.substring(0,50)})}
+})();
+</script>
+</body>
+</html>

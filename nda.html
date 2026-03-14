@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidentiality & Non-Disclosure Agreement - LawnLogic Turf</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#2a7d4f">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=DM+Sans:wght@400;500;700&family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #1a1a1a;
+            --green-rich: #2a7d4f;
+            --cream: #faf6f0;
+            --white: #fff;
+            --font-display: 'Fraunces', serif;
+            --font-body: 'DM Sans', sans-serif;
+            --primary-text: #2d2d2d;
+            --secondary-text: #555;
+            --card-bg: #fff;
+            --border-color: #e8e8e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--primary-text);
+            background-color: #faf6f0;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(255,255,255,.95);
+            padding: 1.5rem 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 45px;
+            width: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        nav a:hover img {
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: #c49b2a;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .effective-date {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: #c49b2a;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--primary-text);
+            margin-bottom: 0.8rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--primary-text);
+        }
+
+        ul {
+            margin-bottom: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+            color: var(--primary-text);
+        }
+
+        /* Back to home link */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #c49b2a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #3cb371;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            margin-top: 4rem;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-top: none;
+        }
+
+        footer .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .slogan {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: #c49b2a;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #c49b2a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #3cb371;
+        }
+
+        .copyright {
+            color: var(--secondary-text);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location {
+            color: var(--secondary-text);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="LawnLogic Turf Logo">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <header>
+            <h1>Confidentiality & Non-Disclosure Agreement</h1>
+            <p class="effective-date">Effective Date: January 1, 2026</p>
+        </header>
+
+        <section>
+            <p><strong>This Confidentiality & Non-Disclosure Agreement</strong> ("Agreement") is entered into between Lawn Logic Turf LLC ("Company") and any client or consultant ("Recipient") who receives Confidential Information during consultations, estimates, or project planning.</p>
+        </section>
+
+        <section>
+            <h2>1. Definition of Confidential Information</h2>
+            <p>Confidential Information includes, but is not limited to:</p>
+            <ul>
+                <li>Design plans, specifications, and custom turf installation layouts</li>
+                <li>Pricing information, estimates, and cost structures</li>
+                <li>Proprietary installation methods and techniques</li>
+                <li>Client property details and site assessments</li>
+                <li>Project schedules and timelines</li>
+                <li>Customer contact information and preferences</li>
+                <li>Business strategies and operational procedures</li>
+                <li>Any other information marked as confidential or reasonably understood to be confidential</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Obligations of the Recipient</h2>
+            <h3>Non-Disclosure</h3>
+            <p>The Recipient agrees to maintain the confidentiality of all Confidential Information and will not disclose such information to any third party without prior written consent from Lawn Logic Turf LLC.</p>
+
+            <h3>Limited Use</h3>
+            <p>Confidential Information shall be used solely for the purpose of evaluating and conducting business with Lawn Logic Turf LLC. Any use beyond this scope requires explicit written approval.</p>
+
+            <h3>Security Measures</h3>
+            <p>The Recipient agrees to implement reasonable safeguards to protect Confidential Information from unauthorized access, use, or disclosure.</p>
+        </section>
+
+        <section>
+            <h2>3. Exclusions from Confidentiality</h2>
+            <p>Confidential Information does not include information that:</p>
+            <ul>
+                <li>Is or becomes publicly available through no breach of this Agreement</li>
+                <li>Is rightfully received by the Recipient from a third party without breach of any confidentiality obligation</li>
+                <li>Is independently developed by the Recipient without use of the Confidential Information</li>
+                <li>Is required to be disclosed by law, court order, or government authority (provided the Recipient gives prompt notice to allow Lawn Logic Turf LLC to seek protective measures)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Term and Duration</h2>
+            <p>This Agreement shall commence upon disclosure of Confidential Information and shall continue for a period of three (3) years following the end of any business relationship, unless otherwise agreed in writing. Certain obligations regarding highly sensitive information may extend longer at the Company's discretion.</p>
+        </section>
+
+        <section>
+            <h2>5. Return of Information</h2>
+            <p>Upon request by Lawn Logic Turf LLC, or upon termination of the business relationship, the Recipient agrees to return or destroy all Confidential Information in their possession, custody, or control and provide written certification of such return or destruction.</p>
+        </section>
+
+        <section>
+            <h2>6. Intellectual Property Rights</h2>
+            <p>All intellectual property rights, including copyrights, trademarks, and trade secrets related to Confidential Information shall remain the exclusive property of Lawn Logic Turf LLC. This Agreement does not grant any license or ownership rights to the Recipient.</p>
+        </section>
+
+        <section>
+            <h2>7. No Obligation to Disclose</h2>
+            <p>Lawn Logic Turf LLC is under no obligation to disclose any Confidential Information. The decision to share information shall be entirely at the Company's discretion.</p>
+        </section>
+
+        <section>
+            <h2>8. No License or Relationship</h2>
+            <p>Nothing in this Agreement creates a partnership, joint venture, or agency relationship between the parties. The Recipient has no authority to bind or represent Lawn Logic Turf LLC.</p>
+        </section>
+
+        <section>
+            <h2>9. Disclaimer</h2>
+            <p>Confidential Information is provided "as is" without warranty of any kind. Lawn Logic Turf LLC makes no representations regarding the accuracy, completeness, or usability of the information.</p>
+        </section>
+
+        <section>
+            <h2>10. Remedies</h2>
+            <p>The Recipient acknowledges that any breach of this Agreement would cause irreparable harm for which monetary damages would be an inadequate remedy. Lawn Logic Turf LLC shall be entitled to seek equitable relief, including injunction and specific performance, in addition to any other legal remedies available.</p>
+        </section>
+
+        <section>
+            <h2>11. Governing Law</h2>
+            <p>This Agreement shall be governed by and construed in accordance with the laws of the State of Georgia, without regard to its conflicts of law provisions.</p>
+        </section>
+
+        <section>
+            <h2>12. Entire Agreement</h2>
+            <p>This Agreement constitutes the entire agreement between the parties regarding the subject matter and supersedes all prior negotiations, representations, and agreements, whether written or oral.</p>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+            <p>
+                For questions regarding this Confidentiality & Non-Disclosure Agreement, please contact:<br><br>
+                Lawn Logic Turf LLC<br>
+                Kennesaw, Georgia<br>
+                Email: <a href="mailto:hello@lawnlogicturf.com" style="color: #c49b2a; text-decoration: none;">hello@lawnlogicturf.com</a><br>
+                Phone: (706) 701-8873
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="slogan">Good grass, don't cut it.</div>
+            <div class="footer-links">
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="nda.html">Confidentiality Agreement</a>
+            </div>
+            <div class="copyright">© 2026 LawnLogic Turf LLC</div>
+            <div class="location">Kennesaw, Georgia</div>
+        </div>
+    </footer>
+</body>
+</html>

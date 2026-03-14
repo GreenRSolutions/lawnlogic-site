@@ -1,0 +1,10 @@
+[build]
+  command = ""
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Skip any framework detection
+[dev]
+  framework = "#static"
