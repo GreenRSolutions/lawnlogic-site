@@ -3,6 +3,7 @@ Allow: /
 Disallow: /seo-pages/generate.py
 Disallow: /seo-pages/config.json
 Disallow: /seo-pages/config-expanded.json
+Disallow: /.netlify/
 
 Sitemap: https://www.lawnlogicturf.com/sitemap.xml
 Sitemap: https://www.lawnlogicturf.com/seo-pages/sitemap.xml
