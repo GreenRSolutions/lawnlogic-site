@@ -123,7 +123,7 @@
         .nav-logo span { color: #8DC63F; }
         .nav-logo img { height: 40px; width: auto; }
 
-        .nav-right { display: flex; align-items: center; gap: 40px; }
+        .nav-right { display: flex; align-items: center; gap: 16px; }
 
         .nav-phone {
             font-size: 16px;
@@ -143,6 +143,17 @@
             letter-spacing: 1px;
         }
         .nav-home:hover { color: var(--accent-green); }
+
+        .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            color: #2a7d4f;
+        }
 
         /* ─── Hero — Dark Premium ─── */
         .warranty-hero {
@@ -908,6 +919,8 @@
                 text-align: center;
             }
 
+            .nav-link { display: none; }
+
             .warranty-hero {
                 padding: 60px 20px 50px;
             }
@@ -944,13 +957,16 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="index.html" class="nav-logo">
+        <a href="/" class="nav-logo">
             <img src="images/logo.png" alt="LawnLogic Turf Logo">
-            LawnLogic Turf
+            Lawn<span>Logic</span> Turf
         </a>
         <div class="nav-right">
+            <a href="about.html" class="nav-link">Our Story</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
             <a href="tel:+17067018873" class="nav-phone">(706) 701-8873</a>
-            <a href="index.html" class="nav-home">&larr; Back to Home</a>
+            <a href="/" class="nav-home">&larr; Home</a>
         </div>
     </nav>
 

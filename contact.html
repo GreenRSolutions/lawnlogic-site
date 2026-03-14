@@ -132,7 +132,7 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 16px;
         }
 
         .nav-phone {
@@ -158,6 +158,18 @@
 
         .nav-home:hover {
             color: var(--accent-green);
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #555;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #2a7d4f;
         }
 
         /* Hero Section */
@@ -682,6 +694,8 @@
                 text-align: center;
             }
 
+            .nav-link { display: none; }
+
             .hero {
                 padding: 50px 20px;
             }
@@ -737,13 +751,16 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="index.html" class="nav-logo">
+        <a href="/" class="nav-logo">
             <img src="images/logo.png" alt="LawnLogic Turf Logo">
-            LawnLogic Turf
+            Lawn<span>Logic</span> Turf
         </a>
         <div class="nav-right">
+            <a href="about.html" class="nav-link">Our Story</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
             <a href="tel:+17067018873" class="nav-phone">(706) 701-8873</a>
-            <a href="index.html" class="nav-home">← Back to Home</a>
+            <a href="/" class="nav-home">&larr; Home</a>
         </div>
     </nav>
 
