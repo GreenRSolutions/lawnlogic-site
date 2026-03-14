@@ -1552,39 +1552,13 @@
 <section class="calculator" id="calculator">
     <div class="container">
         <div class="calc-grid">
-            <div class="calc-interactive reveal">
-                <div class="calc-title-small">Try It Out</div>
-                <div class="calc-heading">How Much Could You Save?</div>
-                <div class="calc-field">
-                    <label class="calc-label">Yard Size (sq ft)</label>
-                    <div class="calc-slider-row">
-                        <input type="range" min="200" max="5000" value="1500" step="50" class="calc-slider" id="sqftSlider" oninput="updateCalc()">
-                        <div class="calc-slider-val" id="sqftVal">1,500</div>
-                    </div>
-                </div>
-                <div class="calc-field">
-                    <label class="calc-label">Years of Ownership</label>
-                    <div class="calc-slider-row">
-                        <input type="range" min="3" max="25" value="10" step="1" class="calc-slider" id="yearSlider" oninput="updateCalc()">
-                        <div class="calc-slider-val" id="yearVal">10</div>
-                    </div>
-                </div>
-                <div class="calc-results">
-                    <div class="calc-results-grid">
-                        <div class="calc-result-item">
-                            <span class="val" id="turfCost">$15,000</span>
-                            <span class="lbl">Turf Investment</span>
-                        </div>
-                        <div class="calc-result-item">
-                            <span class="val" id="grassCost">$31,500</span>
-                            <span class="lbl">Grass Cost Over Time</span>
-                        </div>
-                    </div>
-                    <div class="savings-highlight">
-                        <span class="val" id="savings">$16,500</span>
-                        <span class="lbl">Estimated Savings with Turf</span>
-                    </div>
-                </div>
+            <div class="calc-interactive reveal" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 32px;">
+                <div style="font-size:3.5rem;margin-bottom:16px;">&#128178;</div>
+                <div class="calc-title-small" style="margin-bottom:4px;">Ready to See the Numbers?</div>
+                <div class="calc-heading" style="margin-bottom:16px;">Find Out Exactly What You'll Save</div>
+                <p style="font-size:.95rem;color:var(--bark-mid);max-width:360px;margin:0 auto 28px;line-height:1.6;">Our free app lets you design your yard, pick your turf, and see real pricing &mdash; all in under 2 minutes. No sales call needed.</p>
+                <a href="https://www.getturfinstant.com" class="btn btn-lg btn-green" target="_blank" style="font-size:1.05rem;padding:16px 36px;">Calculate My Savings &rarr;</a>
+                <div style="margin-top:16px;font-size:.75rem;color:var(--bark-light);">Free &middot; No signup required &middot; Instant results</div>
             </div>
             <div class="calc-content reveal reveal-d2">
                 <div class="sh-eyebrow">The Math Doesn't Lie</div>
@@ -1604,7 +1578,7 @@
                         <div><h4>200+ Hours Back Per Year</h4><p>That's your weekends, not your mower's.</p></div>
                     </div>
                 </div>
-                <a href="https://www.getturfinstant.com" class="btn btn-green" target="_blank">See Your Real Savings &rarr;</a>
+                <a href="https://www.getturfinstant.com" class="btn btn-green" target="_blank">Try the Free App &rarr;</a>
                 <a href="#" class="btn btn-outline" style="margin-left:8px;" onclick="event.preventDefault();openLeadForm();">Get a Quote &rarr;</a>
             </div>
         </div>
@@ -2170,6 +2144,10 @@
 </footer>
 
 <script>
+// Always scroll to top on page load/refresh
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 // Phone number formatting
 function formatPhone(input) {
     let v = input.value.replace(/\D/g, '');
