@@ -889,6 +889,12 @@
         .footer-bottom { padding: 18px 0; display: flex; justify-content: space-between; font-size: .75rem; color: #6b6560; }
 
         /* ===== SCROLL ANIMATIONS ===== */
+        /* Prevent scrollbar flash from reveal animations */
+        section, .services, .process, .testimonials, .faq, .partners, .warranty-section, .cta-final,
+        [id="our-story"], [id="gallery"], [id="services"], [id="process"], [id="reviews"],
+        [id="faq"], [id="partners"], [id="warranty"], [id="financing"] {
+            overflow: hidden;
+        }
         .reveal {
             opacity: 0; transform: translateY(28px);
             transition: opacity .7s var(--ease), transform .7s var(--ease);
@@ -2452,33 +2458,36 @@ window.closeChat = function() {
 })();
 </script>
 
-<!-- Address Autocomplete (Nominatim / OpenStreetMap — free, no API key needed) -->
+<!-- Address Autocomplete (Mapbox Search API) -->
 <script>
 (function(){
-    let addrTimer = null;
+    var MAPBOX_TOKEN = 'pk.eyJ1IjoiZ3JlZW5ybG9naWMiLCJhIjoiY21taXJ0MXMwMGh5eDJxcHkwcDIxOTNueiJ9.Qg9b2gXRqwWKUJUwnrw4LQ';
+    var addrTimer = null;
     window.debounceAddress = function(val) {
         clearTimeout(addrTimer);
-        const dd = document.getElementById('addressDropdown');
-        if (val.length < 4) { dd.style.display = 'none'; return; }
-        addrTimer = setTimeout(function(){ fetchAddresses(val); }, 350);
+        var dd = document.getElementById('addressDropdown');
+        if (val.length < 3) { dd.style.display = 'none'; return; }
+        addrTimer = setTimeout(function(){ fetchAddresses(val); }, 300);
     };
     function fetchAddresses(query) {
-        const dd = document.getElementById('addressDropdown');
-        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=us&limit=5&q=' + encodeURIComponent(query), {
-            headers: { 'Accept': 'application/json' }
-        })
+        var dd = document.getElementById('addressDropdown');
+        var url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(query) +
+            '.json?access_token=' + MAPBOX_TOKEN +
+            '&country=us&types=address&limit=5&autocomplete=true' +
+            '&proximity=-84.29,34.02';
+        fetch(url)
         .then(function(r){ return r.json(); })
-        .then(function(results){
-            if (!results.length) { dd.style.display = 'none'; return; }
+        .then(function(data){
+            if (!data.features || !data.features.length) { dd.style.display = 'none'; return; }
             dd.innerHTML = '';
-            results.forEach(function(item){
+            data.features.forEach(function(f){
                 var div = document.createElement('div');
-                div.textContent = item.display_name;
+                div.textContent = f.place_name;
                 div.style.cssText = 'padding:10px 14px;cursor:pointer;font-size:.82rem;color:#333;border-bottom:1px solid #f0f0f0;transition:background .15s;';
                 div.onmouseenter = function(){ this.style.background = '#eef8f2'; };
                 div.onmouseleave = function(){ this.style.background = '#fff'; };
                 div.onclick = function(){
-                    document.getElementById('leadAddress').value = item.display_name;
+                    document.getElementById('leadAddress').value = f.place_name;
                     dd.style.display = 'none';
                 };
                 dd.appendChild(div);
@@ -2487,10 +2496,10 @@ window.closeChat = function() {
         })
         .catch(function(){ dd.style.display = 'none'; });
     }
-    // Close dropdown when clicking outside
     document.addEventListener('click', function(e){
         if (!e.target.closest('#leadAddress') && !e.target.closest('#addressDropdown')) {
-            document.getElementById('addressDropdown').style.display = 'none';
+            var dd = document.getElementById('addressDropdown');
+            if (dd) dd.style.display = 'none';
         }
     });
 })();
