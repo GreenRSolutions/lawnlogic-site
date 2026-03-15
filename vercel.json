@@ -13,12 +13,12 @@
   "redirects": [
     {
       "source": "/store-lawnlogic/:path*",
-      "destination": "https://lawnlogic-squarespace.vercel.app/store-lawnlogic/:path*",
+      "destination": "https://lawnlogic.squarespace.com/store-lawnlogic/:path*",
       "statusCode": 308
     },
     {
       "source": "/store",
-      "destination": "https://www.lawnlogicturf.com/store-lawnlogic",
+      "destination": "https://lawnlogic.squarespace.com/store-lawnlogic",
       "statusCode": 302
     }
   ],

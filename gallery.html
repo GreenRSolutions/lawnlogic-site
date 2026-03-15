@@ -1161,6 +1161,22 @@
             transform: translateY(0);
         }
 
+        /* Fix: gallery items should not start invisible — conflicts with lazy loading on mobile Safari */
+        .gallery-item.reveal {
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .gallery-item.reveal:not(.active) img {
+            opacity: 0;
+            transform: scale(0.97);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .gallery-item.reveal.active img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         /* Scroll to Top */
         .scroll-to-top {
             position: fixed;
@@ -1803,8 +1819,8 @@
 
         // Scroll Reveal
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 200px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {

@@ -1370,7 +1370,7 @@
                     <div style="font-size:.85rem;color:rgba(255,255,255,.6);margin-top:2px;">Multiple financing partners &bull; Apply in 2 minutes &bull; Instant decisions</div>
                 </div>
             </div>
-            <a href="#financing" class="btn" style="background:#fff;color:var(--forest);font-weight:800;padding:14px 32px;border-radius:60px;font-size:.92rem;box-shadow:0 4px 16px rgba(0,0,0,.2);white-space:nowrap;">Check Your Rate &rarr;</a>
+            <!-- Check Your Rate button removed -->
         </div>
     </div>
 </section>
@@ -2270,9 +2270,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 .chat-input-bar input{flex:1;padding:9px 12px;border-radius:60px;border:1px solid #ddd;background:#fff;color:var(--ink);font-size:.82rem;outline:none}
 .chat-input-bar input:focus{border-color:var(--green-rich)}
 .chat-input-bar button{width:36px;height:36px;border-radius:50%;background:var(--green-rich);color:#fff;border:none;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center}
-@media(max-width:768px){.chat-box{max-height:44vh;width:calc(100vw - 28px);right:14px;bottom:80px}.chat-msgs{max-height:160px}.chat-fab{width:48px;height:48px;font-size:1.1rem}}
-@media(max-width:480px){.chat-box{width:calc(100vw - 16px);right:8px;bottom:72px;max-height:36vh}.chat-head{padding:10px 12px}.chat-head-avatar{width:26px;height:26px;font-size:.7rem}.chat-head-name{font-size:.78rem}.chat-head-status{font-size:.6rem}.chat-msgs{max-height:120px;padding:8px;gap:5px}.chat-msg{font-size:.75rem;padding:7px 10px;max-width:88%}.chat-quick{padding:0 8px 6px;gap:4px}.chat-quick button{font-size:.64rem;padding:4px 8px}.chat-input-bar{padding:6px 8px;gap:4px}.chat-input-bar input{padding:7px 10px;font-size:.78rem}.chat-input-bar button{width:32px;height:32px;font-size:.8rem}.chat-fab{bottom:72px;right:10px;width:42px;height:42px;font-size:1rem}.chat-fab .badge{width:15px;height:15px;font-size:.58rem}}
+@media(max-width:768px){.chat-box{max-height:40vh;width:calc(100vw - 28px);right:14px;bottom:80px}.chat-msgs{max-height:120px}.chat-fab{width:48px;height:48px;font-size:1.1rem}.chat-quick{max-height:60px;overflow-y:auto}}
+@media(max-width:480px){.chat-box{width:calc(100vw - 16px);right:8px;bottom:72px;max-height:34vh}.chat-head{padding:10px 12px}.chat-head-avatar{width:26px;height:26px;font-size:.7rem}.chat-head-name{font-size:.78rem}.chat-head-status{font-size:.6rem}.chat-msgs{max-height:80px;padding:8px;gap:5px}.chat-msg{font-size:.75rem;padding:7px 10px;max-width:88%}.chat-quick{padding:0 8px 6px;gap:4px;max-height:50px;overflow-y:auto}.chat-quick button{font-size:.64rem;padding:4px 8px}.chat-input-bar{padding:6px 8px;gap:4px}.chat-input-bar input{padding:7px 10px;font-size:.78rem}.chat-input-bar button{width:32px;height:32px;font-size:.8rem}.chat-fab{bottom:72px;right:10px;width:42px;height:42px;font-size:1rem}.chat-fab .badge{width:15px;height:15px;font-size:.58rem}}
 @media(min-width:769px){.chat-fab{bottom:24px}}
+.chat-box.keyboard-up{bottom:auto!important;top:10px}
 </style>
 
 <button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="Chat with us">
@@ -2397,6 +2398,28 @@ function botReply(text) {
     addMsg(reply, 'bot');
     gtag('event', 'chat_message', { event_category: 'engagement', event_label: text.substring(0, 50) });
 }
+// Keyboard-aware chat positioning for mobile
+if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', function() {
+        const box = document.getElementById('chatBox');
+        if (!box.classList.contains('open')) return;
+        const viewportHeight = window.visualViewport.height;
+        const windowHeight = window.innerHeight;
+        if (windowHeight - viewportHeight > 150) {
+            // Keyboard is open
+            box.classList.add('keyboard-up');
+        } else {
+            box.classList.remove('keyboard-up');
+        }
+    });
+}
+window.closeChat = function() {
+    const box = document.getElementById('chatBox');
+    const fab = document.getElementById('chatFab');
+    box.classList.remove('open');
+    box.classList.remove('keyboard-up');
+    fab.style.display = 'flex';
+};
 })();
 </script>
 </body>
