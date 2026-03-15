@@ -1535,7 +1535,7 @@
                 <p class="dt-desc">Most companies make you wait for a sales visit. We built a free tool that lets you draw your yard, pick turf, and see pricing &mdash; from your couch, right now.</p>
                 <div class="dt-btns">
                     <a href="https://www.getturfinstant.com/designer" class="btn btn-lg btn-cream" target="_blank">Open the Yard Designer</a>
-                    <a href="https://www.getturfinstant.com/quote" class="btn btn-lg" style="color:rgba(255,255,255,.8);border:2px solid rgba(255,255,255,.2);border-radius:80px;" target="_blank">Quick Quote &rarr;</a>
+                    <a href="https://www.getturfinstant.com/quote" class="btn btn-lg" style="color:rgba(255,255,255,.8);border:2px solid rgba(255,255,255,.2);border-radius:80px;" target="_blank">Instant Quote &rarr;</a>
                 </div>
             </div>
             <div class="dt-features reveal reveal-d2">
@@ -1557,7 +1557,7 @@
             <p class="sh-desc">Most yards are done in 1&ndash;2 days. Here's the whole experience.</p>
         </div>
         <div class="process-steps">
-            <div class="ps reveal"><div class="ps-num">1</div><div class="ps-icon">&#128506;</div><h4>Design or Quote</h4><p>Use our online designer or request a quick quote. 2 minutes, zero pressure.</p></div>
+            <div class="ps reveal"><div class="ps-num">1</div><div class="ps-icon">&#128506;</div><h4>Design or Quote</h4><p>Use our online designer or request a instant quote. 2 minutes, zero pressure.</p></div>
             <div class="ps reveal reveal-d1"><div class="ps-num">2</div><div class="ps-icon">&#128100;</div><h4>Meet Dusty</h4><p>We visit your property, talk through your vision, and give you an honest number.</p></div>
             <div class="ps reveal reveal-d2"><div class="ps-num">3</div><div class="ps-icon">&#128736;</div><h4>We Handle It All</h4><p>Our crew preps, installs, and leaves the site cleaner than we found it.</p></div>
             <div class="ps reveal reveal-d3"><div class="ps-num">4</div><div class="ps-icon">&#127881;</div><h4>Enjoy Forever</h4><p>Walk on it same day. No mowing, no mud, no regrets.</p></div>
@@ -2055,7 +2055,7 @@
             <div class="footer-col"><h4>Quick Links</h4><ul>
                 <li><a href="https://www.getturfinstant.com" target="_blank">Get Started Free</a></li>
                 <li><a href="https://www.getturfinstant.com/designer" target="_blank">Yard Designer</a></li>
-                <li><a href="https://www.getturfinstant.com/quote" target="_blank">Free Quote</a></li>
+                <li><a href="#" onclick="event.preventDefault();openLeadForm();">Free Quote</a></li>
                 <li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li>
                 <li><a href="warranty.html">Warranty</a></li>
@@ -2078,7 +2078,7 @@
             <span>&copy; 2026 LawnLogic Turf. Family-owned in Kennesaw, GA.</span>
             <span>Licensed &amp; Insured</span>
         </div>
-        <div style="text-align:center;padding:0 0 12px;">
+        <div style="text-align:center;padding:0 0 80px;">
             <p style="font-family:var(--hand);font-size:1.3rem;color:var(--green-bright);font-style:italic;opacity:.8;">Good grass, don't cut it.</p>
         </div>
     </div>
@@ -2111,6 +2111,32 @@ function closeLeadForm() {
 function submitLead(e) {
     e.preventDefault();
     const btn = document.getElementById('leadSubmitBtn');
+
+    // Phone validation — must be exactly 10 digits
+    const phoneRaw = document.getElementById('leadPhone').value.replace(/\D/g, '');
+    if (phoneRaw.length !== 10) {
+        alert('Please enter a valid 10-digit phone number.');
+        document.getElementById('leadPhone').focus();
+        return false;
+    }
+
+    // Email validation
+    const emailVal = document.getElementById('leadEmail').value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(emailVal)) {
+        alert('Please enter a valid email address.');
+        document.getElementById('leadEmail').focus();
+        return false;
+    }
+
+    // Address validation — must have selected a full address (or entered something substantial)
+    const addrVal = document.getElementById('leadAddress').value.trim();
+    if (addrVal.length > 0 && addrVal.length < 10) {
+        alert('Please enter a complete property address for an accurate quote.');
+        document.getElementById('leadAddress').focus();
+        return false;
+    }
+
     btn.disabled = true;
     btn.textContent = 'Sending...';
 
@@ -2118,6 +2144,8 @@ function submitLead(e) {
     const data = new FormData(form);
     const body = {};
     data.forEach((v, k) => body[k] = v);
+    // Store the clean formatted phone
+    body.phone = '(' + phoneRaw.substring(0,3) + ') ' + phoneRaw.substring(3,6) + '-' + phoneRaw.substring(6);
     body._subject = 'New Lead from LawnLogic Website - ' + (body.service || 'General Inquiry');
     body._replyto = body.email;
 
@@ -2422,5 +2450,33 @@ window.closeChat = function() {
 };
 })();
 </script>
+
+<!-- Google Places Autocomplete for Address Field -->
+<script>
+function initAutocomplete() {
+    const addressInput = document.getElementById('leadAddress');
+    if (!addressInput || !window.google || !google.maps || !google.maps.places) return;
+    const autocomplete = new google.maps.places.Autocomplete(addressInput, {
+        types: ['address'],
+        componentRestrictions: { country: 'us' },
+        fields: ['formatted_address', 'address_components', 'geometry']
+    });
+    autocomplete.addListener('place_changed', function() {
+        const place = autocomplete.getPlace();
+        if (place && place.formatted_address) {
+            addressInput.value = place.formatted_address;
+        }
+    });
+    // Fix z-index so dropdown appears over the lead form modal
+    const observer = new MutationObserver(function() {
+        const pac = document.querySelector('.pac-container');
+        if (pac) { pac.style.zIndex = '100001'; observer.disconnect(); }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+}
+</script>
+<!-- Google Places API: Replace YOUR_API_KEY with a valid key from console.cloud.google.com -->
+<!-- Enable "Places API" and "Maps JavaScript API" in your Google Cloud project, then create an API key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer onerror="console.log('Google Places API not loaded - address autocomplete disabled')"></script>
 </body>
 </html>
