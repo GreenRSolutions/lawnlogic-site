@@ -1141,9 +1141,10 @@
                 <label for="leadEmail">Email *</label>
                 <input type="email" id="leadEmail" name="email" required placeholder="you@email.com">
             </div>
-            <div class="lead-field">
+            <div class="lead-field" style="position:relative;">
                 <label for="leadAddress">Property Address <span style="font-weight:400;color:var(--ash);font-size:.72rem;">(for accurate quote)</span></label>
-                <input type="text" id="leadAddress" name="address" placeholder="Start typing your address..." autocomplete="street-address">
+                <input type="text" id="leadAddress" name="address" placeholder="Start typing your address..." autocomplete="off" oninput="debounceAddress(this.value)">
+                <div id="addressDropdown" style="display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #ddd;border-top:none;border-radius:0 0 12px 12px;max-height:200px;overflow-y:auto;z-index:100002;box-shadow:0 8px 24px rgba(0,0,0,.12);"></div>
             </div>
             <div class="lead-row">
                 <div class="lead-field">
@@ -2451,32 +2452,48 @@ window.closeChat = function() {
 })();
 </script>
 
-<!-- Google Places Autocomplete for Address Field -->
+<!-- Address Autocomplete (Nominatim / OpenStreetMap — free, no API key needed) -->
 <script>
-function initAutocomplete() {
-    const addressInput = document.getElementById('leadAddress');
-    if (!addressInput || !window.google || !google.maps || !google.maps.places) return;
-    const autocomplete = new google.maps.places.Autocomplete(addressInput, {
-        types: ['address'],
-        componentRestrictions: { country: 'us' },
-        fields: ['formatted_address', 'address_components', 'geometry']
-    });
-    autocomplete.addListener('place_changed', function() {
-        const place = autocomplete.getPlace();
-        if (place && place.formatted_address) {
-            addressInput.value = place.formatted_address;
+(function(){
+    let addrTimer = null;
+    window.debounceAddress = function(val) {
+        clearTimeout(addrTimer);
+        const dd = document.getElementById('addressDropdown');
+        if (val.length < 4) { dd.style.display = 'none'; return; }
+        addrTimer = setTimeout(function(){ fetchAddresses(val); }, 350);
+    };
+    function fetchAddresses(query) {
+        const dd = document.getElementById('addressDropdown');
+        fetch('https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&countrycodes=us&limit=5&q=' + encodeURIComponent(query), {
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(function(r){ return r.json(); })
+        .then(function(results){
+            if (!results.length) { dd.style.display = 'none'; return; }
+            dd.innerHTML = '';
+            results.forEach(function(item){
+                var div = document.createElement('div');
+                div.textContent = item.display_name;
+                div.style.cssText = 'padding:10px 14px;cursor:pointer;font-size:.82rem;color:#333;border-bottom:1px solid #f0f0f0;transition:background .15s;';
+                div.onmouseenter = function(){ this.style.background = '#eef8f2'; };
+                div.onmouseleave = function(){ this.style.background = '#fff'; };
+                div.onclick = function(){
+                    document.getElementById('leadAddress').value = item.display_name;
+                    dd.style.display = 'none';
+                };
+                dd.appendChild(div);
+            });
+            dd.style.display = 'block';
+        })
+        .catch(function(){ dd.style.display = 'none'; });
+    }
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e){
+        if (!e.target.closest('#leadAddress') && !e.target.closest('#addressDropdown')) {
+            document.getElementById('addressDropdown').style.display = 'none';
         }
     });
-    // Fix z-index so dropdown appears over the lead form modal
-    const observer = new MutationObserver(function() {
-        const pac = document.querySelector('.pac-container');
-        if (pac) { pac.style.zIndex = '100001'; observer.disconnect(); }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-}
+})();
 </script>
-<!-- Google Places API: Replace YOUR_API_KEY with a valid key from console.cloud.google.com -->
-<!-- Enable "Places API" and "Maps JavaScript API" in your Google Cloud project, then create an API key -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer onerror="console.log('Google Places API not loaded - address autocomplete disabled')"></script>
 </body>
 </html>
