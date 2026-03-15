@@ -2311,8 +2311,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 .chat-box.keyboard-up{bottom:auto!important;top:10px;max-height:45vh}
 /* Floating Quote CTA - left side */
 .float-quote{position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:9997;writing-mode:vertical-rl;text-orientation:mixed}
-.float-quote-btn{display:flex;align-items:center;gap:6px;padding:14px 10px;background:linear-gradient(180deg,var(--green-rich),#1a5c3a);color:#fff;border:none;border-radius:0 12px 12px 0;cursor:pointer;font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;box-shadow:4px 4px 20px rgba(42,125,79,.3);transition:all .3s;white-space:nowrap}
-.float-quote-btn:hover{padding-left:14px;box-shadow:6px 4px 28px rgba(42,125,79,.45);background:linear-gradient(180deg,#35966a,#1a5c3a)}
+.float-quote-btn{display:flex;align-items:center;gap:6px;padding:14px 10px;background:rgba(42,125,79,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;border:none;border-radius:0 12px 12px 0;cursor:pointer;font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;box-shadow:2px 2px 12px rgba(0,0,0,.08);transition:all .3s;white-space:nowrap}
+.float-quote-btn:hover{padding-left:14px;box-shadow:4px 4px 20px rgba(42,125,79,.3);background:rgba(42,125,79,.7)}
 .float-quote-btn span{font-size:1rem;writing-mode:horizontal-tb}
 @media(max-width:480px){.float-quote-btn{padding:10px 7px;font-size:.68rem}.float-quote-btn span{font-size:.85rem}}
 </style>
