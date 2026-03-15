@@ -8,10 +8,15 @@
     <link rel="canonical" href="https://www.lawnlogicturf.com/about">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="About LawnLogic Turf | Family-Owned in Kennesaw, GA">
-    <meta property="og:description" content="Meet Dusty & Haylee Broadhead — 20+ years experience, locally owned. Not a franchise. Your neighbors.">
+    <meta property="og:title" content="About LawnLogic Turf | Family-Owned Turf Installer in Kennesaw, GA">
+    <meta property="og:description" content="Meet Dusty & Haylee Broadhead — the family behind LawnLogic Turf. 20+ years experience, locally owned in Kennesaw, GA. Not a franchise. Your neighbors.">
     <meta property="og:url" content="https://www.lawnlogicturf.com/about">
+    <meta property="og:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About LawnLogic Turf | Family-Owned Turf Installer in Kennesaw, GA">
+    <meta name="twitter:description" content="Meet Dusty & Haylee Broadhead — the family behind LawnLogic Turf. 20+ years experience, locally owned in Kennesaw, GA. Not a franchise. Your neighbors.">
+    <meta name="twitter:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -1089,7 +1094,7 @@
         </ul>
 
         <div class="nav-actions">
-            <a href="tel:+17707779999" class="nav-phone">770-777-9999</a>
+            <a href="tel:7067018873" class="nav-phone">(706) 701-8873</a>
             <button class="btn btn-secondary" onclick="openQuoteForm()">Free Quote</button>
             <button class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -1187,7 +1192,7 @@
 
     <!-- Mobile CTA Bar -->
     <div class="mobile-cta">
-        <a href="tel:+17707779999">📞 Call Now: 770-777-9999</a>
+        <a href="tel:7067018873">📞 Call Now: (706) 701-8873</a>
     </div>
 
     <!-- Footer -->
@@ -1216,8 +1221,8 @@
             </div>
             <div class="footer-section">
                 <h4>Get In Touch</h4>
-                <a href="tel:+17707779999">📞 770-777-9999</a><br>
-                <a href="mailto:info@lawnlogicturf.com">✉ info@lawnlogicturf.com</a><br>
+                <a href="tel:7067018873">📞 (706) 701-8873</a><br>
+                <a href="mailto:dusty@lawnlogicturf.com">✉ dusty@lawnlogicturf.com</a><br>
                 <a href="#" onclick="openQuoteForm(); return false;">Request Quote</a><br>
                 <a href="#">Kennesaw, GA</a>
             </div>
@@ -1266,6 +1271,10 @@
     <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
 
     <script>
+        // Scroll to top on refresh
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+
         // Mobile Menu Toggle
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
@@ -1304,7 +1313,7 @@
 
         // Design Tool Placeholder
         function openDesignTool() {
-            alert('Design tool coming soon! Call us at 770-777-9999 for a free consultation.');
+            window.open('https://www.getturfinstant.com', '_blank');
         }
 
         // Scroll to Top Button

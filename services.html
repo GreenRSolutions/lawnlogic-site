@@ -6,10 +6,15 @@
     <title>Artificial Turf Services | Residential, Pet Turf, Putting Greens | LawnLogic Turf</title>
     <meta name="description" content="Explore LawnLogic Turf's full range of services: residential lawns, pet turf, putting greens, sport courts, commercial installations & full outdoor design. Serving Kennesaw & North Georgia.">
     <link rel="canonical" href="https://www.lawnlogicturf.com/services">
-    <meta property="og:title" content="Artificial Turf Services | LawnLogic Turf">
-    <meta property="og:description" content="Residential, pet turf, putting greens, sport courts, commercial & full outdoor design.">
+    <meta property="og:title" content="Artificial Turf Services | Residential, Pet Turf, Putting Greens | LawnLogic Turf">
+    <meta property="og:description" content="Explore LawnLogic Turf's full range of services: residential lawns, pet turf, putting greens, sport courts, commercial installations & full outdoor design. Serving Kennesaw & North Georgia.">
     <meta property="og:url" content="https://www.lawnlogicturf.com/services">
+    <meta property="og:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artificial Turf Services | Residential, Pet Turf, Putting Greens | LawnLogic Turf">
+    <meta name="twitter:description" content="Explore LawnLogic Turf's full range of services: residential lawns, pet turf, putting greens, sport courts, commercial installations & full outdoor design. Serving Kennesaw & North Georgia.">
+    <meta name="twitter:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -324,12 +329,21 @@
 
         .service-card {
             background-color: var(--cream);
-            padding: 40px;
             border-radius: 24px;
             transition: all 0.3s ease;
             opacity: 0;
             animation: fadeIn 0.6s ease forwards;
-            overflow-x: hidden;
+            overflow: hidden;
+        }
+
+        .service-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card-body {
+            padding: 32px 36px 36px;
         }
 
         @keyframes fadeIn {
@@ -758,6 +772,14 @@
                 margin-bottom: 32px;
             }
 
+            .service-card-img {
+                height: 160px;
+            }
+
+            .service-card-body {
+                padding: 20px;
+            }
+
             .service-card {
                 padding: 20px 16px;
             }
@@ -877,103 +899,115 @@
             <div class="services-grid">
                 <!-- Residential Lawns -->
                 <div class="service-card reveal">
-                    <div class="service-icon">🏡</div>
-                    <h3>Residential Lawns</h3>
-                    <p>Transform your yard into a lush, maintenance-free paradise. Enjoy a beautiful lawn year-round without the hassle of mowing, watering, or chemicals.</p>
-                    <ul class="service-features">
-                        <li>Year-round green appearance</li>
-                        <li>No mowing or watering required</li>
-                        <li>Pet and kid-safe materials</li>
-                        <li>15-25 year warranty</li>
-                    </ul>
-                    <div class="service-buttons">
-                        <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
-                        <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                    <img src="images/residential-luxury-pool-dusk.jpg" alt="Luxury residential turf installation" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Residential Lawns</h3>
+                        <p>Transform your yard into a lush, maintenance-free paradise. Enjoy a beautiful lawn year-round without the hassle of mowing, watering, or chemicals.</p>
+                        <ul class="service-features">
+                            <li>Year-round green appearance</li>
+                            <li>No mowing or watering required</li>
+                            <li>Pet and kid-safe materials</li>
+                            <li>15-25 year warranty</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
+                            <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Pet Turf -->
                 <div class="service-card reveal">
-                    <div class="service-icon">🐕</div>
-                    <h3>Pet Turf</h3>
-                    <p>Built for dogs who dig, roll, and play hard. Our pet-specific turf is durable, antimicrobial, and designed for ultimate pet comfort and owner convenience.</p>
-                    <ul class="service-features">
-                        <li>Antimicrobial infill system</li>
-                        <li>30+ inches per hour drainage</li>
-                        <li>No mud, dead spots, or stains</li>
-                        <li>Easy cleanup and maintenance</li>
-                    </ul>
-                    <div class="service-buttons">
-                        <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
-                        <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                    <img src="images/pet-yorkie-running.jpg" alt="Happy dog running on pet turf" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Pet Turf</h3>
+                        <p>Built for dogs who dig, roll, and play hard. Our pet-specific turf is durable, antimicrobial, and designed for ultimate pet comfort and owner convenience.</p>
+                        <ul class="service-features">
+                            <li>Antimicrobial infill system</li>
+                            <li>30+ inches per hour drainage</li>
+                            <li>No mud, dead spots, or stains</li>
+                            <li>Easy cleanup and maintenance</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
+                            <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Putting Greens -->
                 <div class="service-card reveal">
-                    <div class="service-icon">⛳</div>
-                    <h3>Putting Greens</h3>
-                    <p>Custom backyard greens with true ball roll. Experience championship-quality play right in your own outdoor space.</p>
-                    <ul class="service-features">
-                        <li>USGA specification turf</li>
-                        <li>Multiple cup positions</li>
-                        <li>LED lighting options available</li>
-                        <li>Pro-grade fringe included</li>
-                    </ul>
-                    <div class="service-buttons">
-                        <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
-                        <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                    <img src="images/putting-sunset-hero.jpg" alt="Custom putting green at sunset" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Putting Greens</h3>
+                        <p>Custom backyard greens with true ball roll. Experience championship-quality play right in your own outdoor space.</p>
+                        <ul class="service-features">
+                            <li>USGA specification turf</li>
+                            <li>Multiple cup positions</li>
+                            <li>LED lighting options available</li>
+                            <li>Pro-grade fringe included</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
+                            <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Sport Courts -->
                 <div class="service-card reveal">
-                    <div class="service-icon">🏐</div>
-                    <h3>Sport Courts</h3>
-                    <p>Pickleball, basketball, bocce and multi-sport courts. All-weather play surfaces perfect for families and recreational leagues.</p>
-                    <ul class="service-features">
-                        <li>Regulation dimensions</li>
-                        <li>Shock-absorbing base</li>
-                        <li>Custom line markings</li>
-                        <li>All-weather playability</li>
-                    </ul>
-                    <div class="service-buttons">
-                        <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
-                        <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                    <img src="images/sport-aerial-tennis-pool.jpg" alt="Aerial view of tennis court and pool" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Sport Courts</h3>
+                        <p>Pickleball, basketball, bocce and multi-sport courts. All-weather play surfaces perfect for families and recreational leagues.</p>
+                        <ul class="service-features">
+                            <li>Regulation dimensions</li>
+                            <li>Shock-absorbing base</li>
+                            <li>Custom line markings</li>
+                            <li>All-weather playability</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
+                            <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Commercial -->
                 <div class="service-card reveal">
-                    <div class="service-icon">🏢</div>
-                    <h3>Commercial</h3>
-                    <p>Storefronts, offices, and HOAs deserve beautiful landscaping that attracts customers and tenants. Professional appearance with zero maintenance.</p>
-                    <ul class="service-features">
-                        <li>Heavy-traffic turf</li>
-                        <li>No landscaping bills</li>
-                        <li>Professional appearance</li>
-                        <li>Quick ROI for businesses</li>
-                    </ul>
-                    <div class="service-buttons">
-                        <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
-                        <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                    <img src="images/commercial-playground.jpg" alt="Commercial playground turf installation" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Commercial</h3>
+                        <p>Storefronts, offices, and HOAs deserve beautiful landscaping that attracts customers and tenants. Professional appearance with zero maintenance.</p>
+                        <ul class="service-features">
+                            <li>Heavy-traffic turf</li>
+                            <li>No landscaping bills</li>
+                            <li>Professional appearance</li>
+                            <li>Quick ROI for businesses</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
+                            <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Full Outdoor Design -->
                 <div class="service-card reveal">
-                    <div class="service-icon">🌍</div>
-                    <h3>Full Outdoor Design</h3>
-                    <p>Turf plus pavers, fire pits, walls, and more. One crew, one vision—complete landscape transformation from concept to completion.</p>
-                    <ul class="service-features">
-                        <li>Complete landscape design</li>
-                        <li>Hardscaping and patios</li>
-                        <li>Retaining walls</li>
-                        <li>Outdoor kitchens available</li>
-                    </ul>
-                    <div class="service-buttons">
-                        <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
-                        <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                    <img src="images/residential-deck-pavers.jpg" alt="Full outdoor design with deck and pavers" class="service-card-img" loading="lazy">
+                    <div class="service-card-body">
+                        <h3>Full Outdoor Design</h3>
+                        <p>Turf plus pavers, fire pits, walls, and more. One crew, one vision—complete landscape transformation from concept to completion.</p>
+                        <ul class="service-features">
+                            <li>Complete landscape design</li>
+                            <li>Hardscaping and patios</li>
+                            <li>Retaining walls</li>
+                            <li>Outdoor kitchens available</li>
+                        </ul>
+                        <div class="service-buttons">
+                            <button class="btn btn-green" onclick="openLeadForm()">Get a Quote</button>
+                            <a href="https://getturfinstant.com/designer" class="btn btn-outline">Design Yours</a>
+                        </div>
                     </div>
                 </div>
             </div>

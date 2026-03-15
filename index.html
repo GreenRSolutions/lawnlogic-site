@@ -182,6 +182,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="images/broadhead-family.jpeg">
+    <link rel="preload" as="image" href="images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -468,10 +470,11 @@
         .story-main-img .role { font-size: .82rem; color: var(--ash); margin-top: 2px; }
 
         .story-stat-badge {
-            position: absolute; bottom: -12px; right: -12px;
+            position: absolute; bottom: 12px; right: 12px;
             background: linear-gradient(135deg, #c49b2a, #e0c56e);
             color: #1a1a1a; border-radius: 14px; padding: 12px 16px;
             box-shadow: 0 6px 18px rgba(196,155,42,.3);
+            z-index: 2;
         }
         .story-stat-badge .num { font-size: 1.3rem; font-weight: 800; line-height: 1; }
         .story-stat-badge .lbl { font-size: .62rem; font-weight: 600; opacity: .8; }

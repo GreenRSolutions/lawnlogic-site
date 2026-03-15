@@ -6,6 +6,20 @@
     <title>Project Gallery | Artificial Turf Installations | LawnLogic Turf</title>
     <meta name="description" content="Browse LawnLogic Turf's project gallery. See real before & after photos of residential lawns, pet turf, putting greens, sport courts & outdoor transformations in North Georgia.">
     <meta name="canonical" content="https://www.lawnlogicturf.com/gallery">
+    <meta property="og:title" content="Project Gallery | Artificial Turf Installations | LawnLogic Turf">
+    <meta property="og:description" content="Browse LawnLogic Turf's project gallery. See real before & after photos of residential lawns, pet turf, putting greens, sport courts & outdoor transformations in North Georgia.">
+    <meta property="og:url" content="https://www.lawnlogicturf.com/gallery">
+    <meta property="og:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project Gallery | Artificial Turf Installations | LawnLogic Turf">
+    <meta name="twitter:description" content="Browse LawnLogic Turf's project gallery. See real before & after photos of residential lawns, pet turf, putting greens, sport courts & outdoor transformations in North Georgia.">
+    <meta name="twitter:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1058,6 +1072,83 @@
             }
         }
 
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,.92);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            cursor: zoom-out;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(0,0,0,.5);
+            cursor: default;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1.25rem; right: 1.5rem;
+            background: rgba(255,255,255,.15);
+            border: none;
+            color: #fff;
+            font-size: 1.6rem;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .2s;
+            z-index: 2001;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,.3); }
+        .lightbox-label {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 0 2px 8px rgba(0,0,0,.5);
+            max-width: 80vw;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,.12);
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .2s;
+        }
+        .lightbox-nav:hover { background: rgba(255,255,255,.25); }
+        .lightbox-prev { left: 1rem; }
+        .lightbox-next { right: 1rem; }
+
+        @media (max-width: 480px) {
+            .lightbox-nav { width: 40px; height: 40px; font-size: 1.4rem; }
+            .lightbox-prev { left: .5rem; }
+            .lightbox-next { right: .5rem; }
+            .lightbox-label { font-size: .85rem; bottom: 1.5rem; }
+        }
+
         /* Scroll Reveal */
         .reveal {
             opacity: 0;
@@ -1283,7 +1374,7 @@
                 <li><a href="index.html#faq">FAQ</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="tel:+17705551234" class="phone-btn">📞 (770) 555-1234</a>
+                <a href="tel:7067018873" class="phone-btn">📞 (706) 701-8873</a>
                 <a href="https://getturfinstant.com/designer" target="_blank" class="cta-btn">Design My Yard</a>
                 <button class="cta-btn" onclick="openQuoteForm()">Free Quote</button>
             </div>
@@ -1306,7 +1397,7 @@
             <a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank">Store</a>
             <a href="index.html#faq">FAQ</a>
             <div class="divider"></div>
-            <a href="tel:+17705551234">📞 (770) 555-1234</a>
+            <a href="tel:7067018873">📞 (706) 701-8873</a>
             <a href="https://getturfinstant.com/designer" target="_blank" class="cta-btn" style="text-align: center; display: block;">Design My Yard</a>
             <button class="cta-btn" onclick="openQuoteForm()">Free Quote</button>
         </div>
@@ -1537,7 +1628,91 @@
         </div>
     </div>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(event, -1)">‹</button>
+        <img id="lightboxImg" src="" alt="">
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(event, 1)">›</button>
+        <div class="lightbox-label" id="lightboxLabel"></div>
+    </div>
+
     <script>
+        // Scroll to top on refresh
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+
+        // Lightbox
+        let lightboxItems = [];
+        let lightboxIndex = 0;
+
+        function initLightbox() {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach((item, i) => {
+                item.addEventListener('click', () => {
+                    // Build visible items list
+                    lightboxItems = [];
+                    document.querySelectorAll('.gallery-item').forEach(el => {
+                        if (el.style.display !== 'none') {
+                            lightboxItems.push({
+                                src: el.querySelector('img').src,
+                                label: el.querySelector('.gallery-label')?.textContent || ''
+                            });
+                        }
+                    });
+                    // Find clicked index in visible items
+                    const clickedSrc = item.querySelector('img').src;
+                    lightboxIndex = lightboxItems.findIndex(x => x.src === clickedSrc);
+                    if (lightboxIndex < 0) lightboxIndex = 0;
+                    showLightboxImage();
+                    document.getElementById('lightbox').classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            document.addEventListener('keydown', (e) => {
+                const lb = document.getElementById('lightbox');
+                if (!lb.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox(e);
+                if (e.key === 'ArrowLeft') navigateLightbox(e, -1);
+                if (e.key === 'ArrowRight') navigateLightbox(e, 1);
+            });
+        }
+
+        function showLightboxImage() {
+            const item = lightboxItems[lightboxIndex];
+            document.getElementById('lightboxImg').src = item.src;
+            document.getElementById('lightboxImg').alt = item.label;
+            document.getElementById('lightboxLabel').textContent = item.label;
+        }
+
+        function closeLightbox(e) {
+            e.stopPropagation();
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(e, dir) {
+            e.stopPropagation();
+            lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
+            showLightboxImage();
+        }
+
+        // Touch swipe support for lightbox
+        (function() {
+            let touchStartX = 0;
+            const lb = document.getElementById('lightbox');
+            lb.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            lb.addEventListener('touchend', e => {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) {
+                    navigateLightbox(e, diff > 0 ? 1 : -1);
+                }
+            });
+        })();
+
+        initLightbox();
+
         // Mobile Menu
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
