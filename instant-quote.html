@@ -14,13 +14,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://getturfinstant.com/instant-quote">
 
-    <!-- Google Ads Global Tag (replace AW-XXXXXXXX with real ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXX"></script>
+    <!-- Google Analytics 4 + Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TE4MRNZKNN"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXX');
+    gtag('config', 'G-TE4MRNZKNN');
+    gtag('config', 'AW-17775300843');
+    gtag('config', 'AW-18016868257');
 
     // Capture UTM params on load
     (function() {
@@ -34,6 +36,15 @@
         try { return JSON.parse(sessionStorage.getItem('ll_utms')) || {}; } catch(e) { return {}; }
     }
     </script>
+
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '921635354123969');
+    fbq('init', '913885864899867');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=921635354123969&ev=PageView&noscript=1"/></noscript>
 
     <!-- Schema -->
     <script type="application/ld+json">
