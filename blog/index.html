@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About LawnLogic Turf | Family-Owned Turf Installer in Kennesaw, GA</title>
-    <meta name="description" content="Meet Dusty & Haylee Broadhead — the family behind LawnLogic Turf. 20+ years experience, locally owned in Kennesaw, GA. Not a franchise. Your neighbors.">
-    <link rel="canonical" href="https://www.lawnlogicturf.com/about">
+    <title>Blog | Artificial Turf Tips & Guides | LawnLogic Turf</title>
+    <meta name="description" content="Expert guides, tips, and honest advice about artificial turf installation, cost, and care from LawnLogic Turf in Kennesaw, GA. 20+ years of experience.">
+    <link rel="canonical" href="https://www.lawnlogicturf.com/blog/">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="About LawnLogic Turf | Family-Owned Turf Installer in Kennesaw, GA">
-    <meta property="og:description" content="Meet Dusty & Haylee Broadhead — the family behind LawnLogic Turf. 20+ years experience, locally owned in Kennesaw, GA. Not a franchise. Your neighbors.">
-    <meta property="og:url" content="https://www.lawnlogicturf.com/about">
-    <meta property="og:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
+    <meta property="og:title" content="Blog | Artificial Turf Tips & Guides | LawnLogic Turf">
+    <meta property="og:description" content="Expert guides, tips, and honest advice about artificial turf installation, cost, and care from LawnLogic Turf in Kennesaw, GA.">
+    <meta property="og:url" content="https://www.lawnlogicturf.com/blog/">
+    <meta property="og:image" content="https://www.lawnlogicturf.com/images/logo.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About LawnLogic Turf | Family-Owned Turf Installer in Kennesaw, GA">
-    <meta name="twitter:description" content="Meet Dusty & Haylee Broadhead — the family behind LawnLogic Turf. 20+ years experience, locally owned in Kennesaw, GA. Not a franchise. Your neighbors.">
-    <meta name="twitter:image" content="https://www.lawnlogicturf.com/images/broadhead-family.jpeg">
+    <meta name="twitter:title" content="Blog | Artificial Turf Tips & Guides | LawnLogic Turf">
+    <meta name="twitter:description" content="Expert guides, tips, and honest advice about artificial turf installation, cost, and care from LawnLogic Turf in Kennesaw, GA.">
+    <meta name="twitter:image" content="https://www.lawnlogicturf.com/images/logo.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
     <meta name="theme-color" content="#2a7d4f">
 
     <!-- Google Fonts -->
@@ -55,13 +55,12 @@
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=921635354123969&ev=PageView&noscript=1" /></noscript>
-
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=913885864899867&ev=PageView&noscript=1" /></noscript>
 
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Home","item":"https://www.lawnlogicturf.com/"},
-        {"@type":"ListItem","position":2,"name":"About","item":"https://www.lawnlogicturf.com/about"}
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.lawnlogicturf.com/blog/"}
     ]}
     </script>
 
@@ -74,6 +73,7 @@
 
         :root {
             --forest: #1a3a2a;
+            --forest-mid: #234d36;
             --green-rich: #2a7d4f;
             --green-bright: #3cb371;
             --green-light: #8fd4a8;
@@ -81,7 +81,6 @@
             --green-wash: #eef8f2;
             --cream: #faf6f0;
             --cream-mid: #f2ebe0;
-            --cream-dark: #e8dcc8;
             --charcoal: #1a1a1a;
             --ink: #2d2d2d;
             --stone: #555;
@@ -276,19 +275,14 @@
         .hero {
             margin-top: 80px;
             position: relative;
-            height: 500px;
+            height: 400px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             max-width: 100%;
             width: 100%;
-        }
-
-        .hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            background: linear-gradient(135deg, var(--forest) 0%, var(--green-rich) 100%);
         }
 
         .hero-overlay {
@@ -297,22 +291,31 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(26, 58, 42, 0.4), rgba(42, 125, 79, 0.3));
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
         }
 
-        .hero-badge {
-            background-color: var(--gold);
-            color: var(--white);
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
+        .hero-content h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
             font-weight: 700;
-            font-size: 1.1rem;
-            text-align: center;
-            box-shadow: 0 8px 24px rgba(196, 155, 42, 0.3);
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
             animation: slideUp 0.8s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--green-pale);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease-out 0.2s both;
         }
 
         @keyframes slideUp {
@@ -326,175 +329,126 @@
             }
         }
 
-        /* Story Section */
-        .story-section {
+        /* Blog Grid Section */
+        .blog-section {
             padding: 4rem 2rem;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             overflow-x: hidden;
         }
 
-        .story-photo-container {
-            max-width: 400px;
-            margin: 2rem auto;
-            position: relative;
-        }
-
-        .story-photo-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .story-badge {
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--gold);
-            color: var(--white);
-            padding: 0.75rem 1.25rem;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(196, 155, 42, 0.3);
-            z-index: 10;
-        }
-
-        .story-section h1 {
-            font-family: 'Fraunces', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: var(--forest);
-            line-height: 1.2;
-        }
-
-        .story-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: var(--stone);
-        }
-
-        .story-quote {
-            margin: 3rem 0;
-            padding: 2rem;
-            background-color: var(--green-wash);
-            border-left: 4px solid var(--logo-green);
-            border-radius: 12px;
-        }
-
-        .story-quote p {
-            font-family: 'Caveat', cursive;
-            font-size: 1.5rem;
-            color: var(--forest);
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .story-quote .author {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--stone);
-            margin-top: 1rem;
-        }
-
-        /* Values Grid */
-        .values-section {
-            background-color: var(--green-wash);
-            padding: 4rem 2rem;
-        }
-
-        .values-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .values-title {
-            font-family: 'Fraunces', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--forest);
-        }
-
-        .values-grid {
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
 
-        .value-card {
+        /* Blog Card */
+        .blog-card {
             background-color: var(--white);
-            padding: 2rem;
-            border-radius: 24px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .value-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         }
 
-        .value-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-card h3 {
-            font-family: 'Fraunces', serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--forest);
-        }
-
-        .value-card p {
-            color: var(--stone);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Stats Bar */
-        .stats-section {
-            background-color: var(--forest);
+        .blog-card-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--green-light) 0%, var(--green-bright) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--white);
-            padding: 3rem 2rem;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stats-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
+        .blog-card-image.image-1 {
+            background: linear-gradient(135deg, #2a7d4f 0%, #3cb371 100%);
         }
 
-        .stat-item h4 {
-            font-family: 'Fraunces', serif;
-            font-size: 1.8rem;
+        .blog-card-image.image-2 {
+            background: linear-gradient(135deg, #3cb371 0%, #8fd4a8 100%);
+        }
+
+        .blog-card-image.image-3 {
+            background: linear-gradient(135deg, #1a3a2a 0%, #2a7d4f 100%);
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-card-tag {
+            display: inline-block;
+            background-color: var(--green-pale);
+            color: var(--forest);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            width: fit-content;
         }
 
-        .stat-item p {
-            font-size: 0.9rem;
-            color: var(--green-light);
-            font-weight: 500;
+        .blog-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--forest);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-card p {
+            font-size: 0.95rem;
+            color: var(--stone);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--green-rich);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            width: fit-content;
+        }
+
+        .blog-card-link:hover {
+            color: var(--logo-green);
+            gap: 0.8rem;
+        }
+
+        .blog-card-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
         }
 
         /* CTA Section */
         .cta-section {
             padding: 4rem 2rem;
-            background-color: var(--cream);
+            background-color: var(--green-wash);
             text-align: center;
         }
 
@@ -507,8 +461,15 @@
             font-family: 'Fraunces', serif;
             font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             color: var(--forest);
+        }
+
+        .cta-section p {
+            font-size: 1rem;
+            color: var(--stone);
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         .cta-buttons {
@@ -699,16 +660,8 @@
             box-shadow: 0 0 0 3px rgba(141, 198, 63, 0.1);
         }
 
-        /* Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+        .form-group textarea:focus {
+            border-color: var(--logo-green);
         }
 
         /* Scroll to Top Button */
@@ -736,13 +689,25 @@
             box-shadow: 0 6px 16px rgba(141, 198, 63, 0.4);
         }
 
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .stats-container {
+            .footer-container {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .footer-container {
+            .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -779,20 +744,6 @@
                 z-index: 999;
             }
 
-            .nav-links.active + .nav-actions {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                padding: 1.5rem;
-                gap: 1rem;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
             .hamburger {
                 display: flex;
             }
@@ -817,49 +768,26 @@
             }
 
             .hero {
-                height: 350px;
+                height: 300px;
                 margin-top: 60px;
             }
 
-            .hero-badge {
-                font-size: 0.9rem;
-                padding: 0.75rem 1.25rem;
+            .hero-content h1 {
+                font-size: 2rem;
+                margin-bottom: 0.75rem;
             }
 
-            .story-section {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .story-section h1 {
-                font-size: 1.8rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .story-section p {
+            .hero-content p {
                 font-size: 1rem;
             }
 
-            .values-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .values-section {
+            .blog-section {
                 padding: 2.5rem 1.5rem;
             }
 
-            .values-title {
-                font-size: 1.6rem;
-                margin-bottom: 2rem;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-
-            .stat-item h4 {
-                font-size: 1.4rem;
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .cta-section {
@@ -872,16 +800,11 @@
 
             .cta-buttons {
                 gap: 1rem;
-                flex-direction: row;
+                flex-direction: column;
             }
 
             .cta-buttons .btn {
-                flex: 1;
-                min-width: 120px;
-            }
-
-            .btn {
-                display: inline-block;
+                width: 100%;
             }
 
             .mobile-cta {
@@ -893,182 +816,13 @@
             }
 
             .footer-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
 
             .modal-content {
-                margin: 30% auto;
-                width: 95%;
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                padding: 0.75rem;
-            }
-
-            .nav-logo img {
-                height: 32px;
-            }
-
-            .nav-logo-text .brand {
-                font-size: 1rem;
-            }
-
-            .nav-logo-text .tagline {
-                font-size: 0.55rem;
-            }
-
-            .nav-actions {
-                gap: 0.5rem;
-            }
-
-            .nav-phone {
-                display: none;
-            }
-
-            .btn {
-                padding: 0.65rem 1.25rem;
-                font-size: 0.8rem;
-            }
-
-            .hero {
-                height: 280px;
-                margin-top: 60px;
-            }
-
-            .hero-badge {
-                font-size: 0.8rem;
-                padding: 0.6rem 1rem;
-            }
-
-            .story-section {
-                padding: 3.75rem 1rem;
-            }
-
-            .story-section h1 {
-                font-size: 1.9rem;
-            }
-
-            .story-section p {
-                font-size: 0.92rem;
-                line-height: 1.6;
-            }
-
-            .story-quote p {
-                font-size: 1.2rem;
-            }
-
-            .story-quote {
-                padding: 1.5rem;
-                margin: 2rem 0;
-                overflow-x: hidden;
-            }
-
-            .values-section {
-                padding: 3.75rem 1rem;
-            }
-
-            .values-title {
-                font-size: 1.6rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .values-grid {
-                gap: 1rem;
-                grid-template-columns: 1fr;
-            }
-
-            .value-card {
-                padding: 1.5rem;
-                overflow-x: hidden;
-            }
-
-            .value-card .icon {
-                font-size: 2rem;
-            }
-
-            .value-card h3 {
-                font-size: 1.1rem;
-            }
-
-            .value-card p {
-                font-size: 0.85rem;
-            }
-
-            .stats-section {
-                padding: 3.75rem 1rem;
-                overflow-x: hidden;
-            }
-
-            .stats-container {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .stat-item h4 {
-                font-size: 1.3rem;
-            }
-
-            .stat-item p {
-                font-size: 0.8rem;
-            }
-
-            .cta-section {
-                padding: 3.75rem 1rem;
-                overflow-x: hidden;
-            }
-
-            .cta-section h2 {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .cta-buttons .btn {
-                width: 100%;
-            }
-
-            footer {
-                padding: 2rem 1rem;
-                overflow-x: hidden;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .footer-section h4 {
-                font-size: 0.95rem;
-            }
-
-            .footer-section a {
-                font-size: 0.8rem;
-            }
-
-            .social-links {
-                gap: 1rem;
-            }
-
-            .social-links a {
-                width: 36px;
-                height: 36px;
-                font-size: 0.8rem;
-            }
-
-            .scroll-to-top {
-                width: 45px;
-                height: 45px;
-                bottom: 1.5rem;
-                right: 1.5rem;
-                font-size: 1.2rem;
+                width: 90%;
+                margin: 40% auto;
             }
         }
     </style>
@@ -1076,8 +830,8 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="index.html" class="nav-logo">
-            <img src="images/logo.png" alt="LawnLogic Logo">
+        <a href="../index.html" class="nav-logo">
+            <img src="../images/logo.png" alt="LawnLogic Logo">
             <div class="nav-logo-text">
                 <div class="brand">Lawn<span class="logic">Logic</span></div>
                 <div class="tagline">TURF & OUTDOOR</div>
@@ -1085,11 +839,11 @@
         </a>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="about.html" class="active">Our Story</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog/">Blog</a></li>
-            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="../about.html">Our Story</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="index.html" class="active">Blog</a></li>
+            <li><a href="../index.html#reviews">Reviews</a></li>
             <li><a href="https://www.lawnlogicturf.com/store-lawnlogic">Store</a></li>
         </ul>
 
@@ -1106,75 +860,54 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="images/broadhead-family.jpeg" alt="The Broadhead Family">
         <div class="hero-overlay">
-            <div class="hero-badge">★ 4.9 Avg across all platforms</div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="story-section reveal">
-        <h1>Not a Franchise. Not a Corporation. Your Neighbors.</h1>
-
-        <p>LawnLogic started because too many homeowners were getting burned — big franchise crews that overpromised, cut corners, and disappeared when something went wrong. We're the opposite of that.</p>
-
-        <p>I'm Dusty. My wife Haylee and I built this business from the ground up — literally. We started with a truck, a dream, and 20+ years of hands-on experience in outdoor construction. We've poured concrete in the rain, laid turf in 100-degree heat, and stayed until midnight to make sure a customer's yard was perfect for their kid's birthday party the next morning. That's just how we operate.</p>
-
-        <p>We're raising our family right here in Kennesaw. When you call LawnLogic, you're not getting a call center — you're getting me, Haylee, or someone who's been with us for years. We know our neighbors by name. We coach their kids' teams. We go to the same churches and shop at the same stores. Your yard is our reputation, and in a small community, reputation is everything.</p>
-
-        <div class="story-quote">
-            <p>"We don't do this for the money. We do it because there's nothing like seeing a family step onto their new yard for the first time and watching their kids lose their minds."</p>
-            <div class="author">— Dusty</div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="values-container">
-            <h2 class="values-title reveal">Our Values</h2>
-            <div class="values-grid">
-                <div class="value-card reveal">
-                    <div class="icon">🤝</div>
-                    <h3>Honest Pricing</h3>
-                    <p>No hidden fees, ever. What we quote is what you pay.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="icon">🔧</div>
-                    <h3>20+ Years Experience</h3>
-                    <p>Every type of outdoor project, in every condition.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="icon">🏠</div>
-                    <h3>Locally Owned</h3>
-                    <p>Based in Kennesaw, serving neighbors we see every day.</p>
-                </div>
-                <div class="value-card reveal">
-                    <div class="icon">🛡️</div>
-                    <h3>Licensed & Insured</h3>
-                    <p>Fully bonded, fully insured, fully backed.</p>
-                </div>
+            <div class="hero-content">
+                <h1>LawnLogic Blog</h1>
+                <p>Tips, guides, and honest advice about artificial turf from a family that's been doing this 20+ years.</p>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section reveal">
-        <div class="stats-container">
-            <div class="stat-item">
-                <h4>20+</h4>
-                <p>Years Experience</p>
+    <!-- Blog Grid Section -->
+    <section class="blog-section reveal">
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card reveal">
+                <div class="blog-card-image image-1">
+                    🌱
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Guides</span>
+                    <h3>Artificial Turf vs. Natural Grass in Georgia</h3>
+                    <p>Learn the pros and cons of artificial turf compared to traditional lawn in Georgia's climate. Discover which option is right for your home and lifestyle.</p>
+                    <a href="artificial-turf-vs-natural-grass-georgia.html" class="blog-card-link">Read More</a>
+                </div>
             </div>
-            <div class="stat-item">
-                <h4>1,000+</h4>
-                <p>Projects Completed</p>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-card reveal">
+                <div class="blog-card-image image-2">
+                    💰
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Cost</span>
+                    <h3>How Much Does Artificial Turf Cost?</h3>
+                    <p>Get honest pricing breakdown for artificial turf installation. Understand what factors affect cost and why LawnLogic's pricing is transparent and fair.</p>
+                    <a href="how-much-does-artificial-turf-cost.html" class="blog-card-link">Read More</a>
+                </div>
             </div>
-            <div class="stat-item">
-                <h4>4.9★</h4>
-                <p>Customer Rating</p>
-            </div>
-            <div class="stat-item">
-                <h4>15</h4>
-                <p>Year Warranty</p>
+
+            <!-- Blog Post 3 -->
+            <div class="blog-card reveal">
+                <div class="blog-card-image image-3">
+                    🐕
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-tag">Pet Turf</span>
+                    <h3>Best Artificial Turf for Dogs in Georgia</h3>
+                    <p>Find the perfect artificial turf solution for pet owners. Learn about dog-friendly materials and why artificial turf is often better for pets than natural grass.</p>
+                    <a href="best-artificial-turf-for-dogs-georgia.html" class="blog-card-link">Read More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1182,7 +915,8 @@
     <!-- CTA Section -->
     <section class="cta-section reveal">
         <div class="cta-container">
-            <h2>Let's Build Something Together</h2>
+            <h2>Ready to Transform Your Yard?</h2>
+            <p>Let the LawnLogic team show you what beautiful, low-maintenance turf can do for your property.</p>
             <div class="cta-buttons">
                 <button class="btn btn-primary" onclick="openDesignTool()">Design My Yard</button>
                 <button class="btn btn-primary" onclick="openQuoteForm()">Get Free Quote</button>
@@ -1213,10 +947,11 @@
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
-                <a href="index.html">Home</a><br>
-                <a href="about.html">About</a><br>
-                <a href="services.html">Services</a><br>
-                <a href="gallery.html">Gallery</a><br>
+                <a href="../index.html">Home</a><br>
+                <a href="../about.html">About</a><br>
+                <a href="../services.html">Services</a><br>
+                <a href="../gallery.html">Gallery</a><br>
+                <a href="index.html">Blog</a><br>
                 <a href="https://www.lawnlogicturf.com/store-lawnlogic">Store</a>
             </div>
             <div class="footer-section">
@@ -1228,7 +963,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 LawnLogic Turf. All rights reserved. | <a href="#" style="color: var(--cloud); text-decoration: underline;">Privacy Policy</a> | <a href="#" style="color: var(--cloud); text-decoration: underline;">Terms of Service</a></p>
+            <p>&copy; 2026 LawnLogic Turf. All rights reserved. | <a href="../privacy-policy.html" style="color: var(--cloud); text-decoration: underline;">Privacy Policy</a> | <a href="../terms-of-service.html" style="color: var(--cloud); text-decoration: underline;">Terms of Service</a></p>
         </div>
     </footer>
 
