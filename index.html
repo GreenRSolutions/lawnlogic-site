@@ -1235,8 +1235,7 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="#reviews">Reviews</a></li>
-                <li><a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank">Store</a></li>
-            </ul>
+                </ul>
             <div class="nav-actions">
                 <a href="tel:7067018873" style="display:flex;align-items:center;gap:6px;padding:8px 12px;font-size:.8rem;font-weight:700;color:var(--green-rich);white-space:nowrap;">&#128222; (706) 701-8873</a>
                 <a href="https://www.getturfinstant.com/designer" class="btn btn-outline" target="_blank" style="padding:8px 16px;font-size:.78rem;">Design My Yard</a>
@@ -1260,7 +1259,6 @@
         <li><a href="blog/">Blog</a></li>
         <li><a href="#reviews" onclick="toggleMobile()">Reviews</a></li>
         <li><a href="#areas" onclick="toggleMobile()">Service Areas</a></li>
-        <li><a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank">Store</a></li>
     </ul>
     <div class="mo-bottom">
         <a href="https://www.getturfinstant.com/designer" class="btn btn-outline" target="_blank">Design My Yard</a>
@@ -1773,23 +1771,6 @@
     </div>
 </section>
 
-<!-- BLADES COLLECTION STORE CTA -->
-<section style="padding:80px 0;background:var(--white);" id="shop">
-    <div class="container">
-        <div style="max-width:640px;margin:0 auto;text-align:center;padding:56px 40px;background:var(--cream);border-radius:28px;border:1px solid var(--cream-dark);position:relative;overflow:hidden;">
-            <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(141,198,63,.06),transparent 60%);pointer-events:none;"></div>
-            <div style="position:relative;z-index:2;">
-                <div style="font-size:3rem;margin-bottom:12px;">&#128085;</div>
-                <div style="font-family:var(--hand);font-size:1.3rem;color:var(--green-rich);margin-bottom:4px;">Rep the Brand</div>
-                <h2 style="font-family:var(--display);font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;color:var(--charcoal);line-height:1.2;margin-bottom:12px;">The Blades Collection</h2>
-                <p style="font-size:1rem;color:var(--stone);line-height:1.7;margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto;">Tees, hoodies, hats, pickleball paddles, golf balls &amp; more. Premium gear that shows your Logic.</p>
-                <a href="https://www.lawnlogicturf.com/store-lawnlogic" class="btn btn-lg" style="background:#8DC63F;color:#fff;box-shadow:0 4px 20px rgba(141,198,63,.3);font-size:1.05rem;padding:20px 48px;" target="_blank">Shop the Collection &rarr;</a>
-                <p style="margin-top:14px;font-size:.78rem;color:var(--ash);">50+ products &bull; Free shipping on select items</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- BEFORE / AFTER -->
 <section class="before-after" id="transform">
     <div class="container">
@@ -2025,6 +2006,17 @@
 </section>
 
 <!-- FOOTER -->
+
+<!-- GOOGLE REVIEWS (ELFSIGHT) -->
+<section style="padding:60px 0;background:#fff;">
+    <div class="container" style="max-width:900px;margin:0 auto;text-align:center;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:#8DC63F;font-weight:700;margin-bottom:8px;">Verified Reviews</div>
+        <h2 style="font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--charcoal);margin-bottom:32px;">What Our Customers Are Saying</h2>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-cc0ab470-d921-42b9-aed8-c2a4e8b70824" data-elfsight-app-lazy></div>
+    </div>
+</section>
+
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
@@ -2064,7 +2056,6 @@
                 <li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li>
                 <li><a href="warranty.html">Warranty</a></li>
-                <li><a href="https://www.lawnlogicturf.com/store-lawnlogic" target="_blank">Merch Store</a></li>
             </ul></div>
             <div class="footer-col"><h4>Areas</h4><ul>
                 <li><a href="#areas">Kennesaw</a></li><li><a href="#areas">Marietta</a></li>
@@ -2528,5 +2519,75 @@ window.closeChat = function() {
   },{passive:true});
 })();
 </script>
+
+<!-- MOBILE STICKY CTA BAR -->
+<div id="mobile-sticky-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;border-top:1px solid #e5e5e5;padding:10px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.1);">
+    <div style="display:flex;gap:10px;max-width:480px;margin:0 auto;">
+        <a href="tel:7067018873" style="flex:1;background:#f5f5f5;color:#1a1a1a;font-weight:700;font-size:.85rem;padding:13px 8px;border-radius:12px;text-align:center;text-decoration:none;border:1px solid #ddd;">&#128222; Call Now</a>
+        <a href="#" onclick="event.preventDefault();openLeadForm();" style="flex:1.5;background:#8DC63F;color:#fff;font-weight:800;font-size:.85rem;padding:13px 8px;border-radius:12px;text-align:center;text-decoration:none;">Get Free Quote</a>
+    </div>
+</div>
+<script>
+(function(){
+    var bar = document.getElementById('mobile-sticky-bar');
+    if (!bar) return;
+    function checkMobile(){ bar.style.display = window.innerWidth < 768 ? 'block' : 'none'; }
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    if (window.innerWidth < 768) document.body.style.paddingBottom = '70px';
+})();
+</script>
+
+
+<!-- EXIT INTENT POPUP -->
+<div id="exit-popup-ll" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:99999;align-items:center;justify-content:center;">
+    <div style="background:#fff;border-radius:20px;max-width:460px;width:90%;padding:2.5rem;position:relative;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25);">
+        <button onclick="document.getElementById('exit-popup-ll').style.display='none'" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#999;">&times;</button>
+        <div style="font-size:2.5rem;margin-bottom:8px;">&#9889;</div>
+        <h3 style="font-size:1.4rem;font-weight:800;color:#1a1a1a;margin-bottom:8px;">Wait &mdash; Don&rsquo;t Leave Without Your Price!</h3>
+        <p style="color:#666;font-size:.95rem;margin-bottom:1.2rem;">87% of homeowners who get a quote today lock in 2026 pricing. Enter your phone and we&rsquo;ll text you a ballpark in minutes.</p>
+        <form id="exit-form-ll" style="display:flex;flex-direction:column;gap:10px;">
+            <input type="text" id="exit-name-ll" placeholder="Your Name" required style="padding:12px 16px;border:2px solid #ddd;border-radius:10px;font-size:1rem;outline:none;font-family:inherit;">
+            <input type="tel" id="exit-phone-ll" placeholder="Phone Number" required style="padding:12px 16px;border:2px solid #ddd;border-radius:10px;font-size:1rem;outline:none;font-family:inherit;">
+            <button type="submit" style="background:#8DC63F;color:#fff;border:none;border-radius:10px;padding:14px;font-size:1rem;font-weight:800;cursor:pointer;font-family:inherit;">Text Me My Price Now &rarr;</button>
+        </form>
+        <p style="margin-top:10px;font-size:.75rem;color:#aaa;">No spam. Just your price. We respond within minutes.</p>
+        <div style="margin-top:14px;padding-top:14px;border-top:1px solid #eee;">
+            <a href="https://www.getturfinstant.com" target="_blank" style="color:#8DC63F;font-weight:600;font-size:.88rem;">&#9889; Or use the Instant Estimate Tool instead &rarr;</a>
+        </div>
+    </div>
+</div>
+<script>
+(function(){
+    var shown = false;
+    function show(){
+        if(shown) return; shown=true;
+        var p=document.getElementById('exit-popup-ll');
+        if(p){ p.style.display='flex'; }
+        if(typeof gtag!=='undefined') gtag('event','exit_intent_shown',{event_category:'engagement'});
+    }
+    document.addEventListener('mouseleave',function(e){ if(e.clientY<10) show(); });
+    var lastY=0;
+    window.addEventListener('scroll',function(){
+        var y=window.scrollY;
+        if(lastY-y>80&&y<200) setTimeout(show,300);
+        lastY=y;
+    },{passive:true});
+    setTimeout(function(){ show(); },45000);
+    document.getElementById('exit-form-ll').addEventListener('submit',function(e){
+        e.preventDefault();
+        var name=document.getElementById('exit-name-ll').value;
+        var phone=document.getElementById('exit-phone-ll').value;
+        if(typeof gtag!=='undefined'){
+            gtag('event','exit_intent_submit',{event_category:'lead',event_label:phone});
+            gtag('event','conversion',{send_to:'AW-18016868257'});
+        }
+        fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,phone:phone,source:'exit_intent',page:'/'})}).catch(function(){});
+        document.getElementById('exit-popup-ll').innerHTML='<div style="padding:3rem 2rem;text-align:center;"><div style="font-size:3rem;">&#9989;</div><h3 style="font-size:1.4rem;font-weight:800;margin:1rem 0 .5rem;">Got it, '+name.split(' ')[0]+'!</h3><p style="color:#555;">We'll text you a ballpark price within minutes.</p><p style="margin-top:1rem;"><a href="https://www.getturfinstant.com" target="_blank" style="color:#8DC63F;font-weight:600;">&#9889; Get an instant estimate now &rarr;</a></p></div>';
+        setTimeout(function(){ document.getElementById('exit-popup-ll').style.display='none'; },4000);
+    });
+})();
+</script>
+
 </body>
 </html>
