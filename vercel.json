@@ -6,11 +6,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/seo/:path*",
-      "destination": "https://instant.lawnlogicturf.com",
-      "statusCode": 301
-    },
-    {
       "source": "/seo-pages/:path*",
       "destination": "https://instant.lawnlogicturf.com",
       "statusCode": 301
@@ -54,6 +49,28 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/seo/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap-seo.xml",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
         }
       ]
     },

@@ -7,3 +7,4 @@ Disallow: /.netlify/
 
 Sitemap: https://www.lawnlogicturf.com/sitemap.xml
 Sitemap: https://www.lawnlogicturf.com/seo-pages/sitemap.xml
+Sitemap: https://www.lawnlogicturf.com/sitemap-seo.xml
