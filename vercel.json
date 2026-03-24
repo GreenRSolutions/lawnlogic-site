@@ -4,6 +4,12 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/:slug*-ga",
+      "destination": "/seo-pages/pages/:slug*-ga.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/store-lawnlogic/:path*",
