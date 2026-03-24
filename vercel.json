@@ -18,7 +18,7 @@
   ],
   "rewrites": [
     {
-      "source": "/:slug",
+      "source": "/:slug([a-z0-9][a-z0-9-]*-ga)",
       "destination": "/seo-pages/pages/:slug.html"
     }
   ],
