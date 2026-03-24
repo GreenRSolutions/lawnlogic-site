@@ -6,11 +6,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/seo-pages/:path*",
-      "destination": "https://instant.lawnlogicturf.com",
-      "statusCode": 301
-    },
-    {
       "source": "/store-lawnlogic/:path*",
       "destination": "https://lawnlogic.squarespace.com/store-lawnlogic/:path*",
       "statusCode": 308
@@ -19,6 +14,12 @@
       "source": "/store",
       "destination": "https://lawnlogic.squarespace.com/store-lawnlogic",
       "statusCode": 302
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:slug",
+      "destination": "/seo-pages/pages/:slug.html"
     }
   ],
   "headers": [
@@ -54,6 +55,15 @@
     },
     {
       "source": "/seo/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/seo-pages/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
