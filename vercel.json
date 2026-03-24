@@ -16,12 +16,6 @@
       "statusCode": 302
     }
   ],
-  "rewrites": [
-    {
-      "source": "/((?!about|contact|gallery|services|blog|privacy-policy|terms-of-service|instant-quote|nda|sitemap|robots|images|seo|seo-pages|store|public|site\\.webmanifest)[^/]+)",
-      "destination": "/seo-pages/pages/$1.html"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
