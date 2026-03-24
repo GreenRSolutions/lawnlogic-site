@@ -876,7 +876,8 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="about.html">Our Story</a>
+        <a href="/">Home</a>
+            <a href="about.html">Our Story</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="blog/">Blog</a>
@@ -1108,7 +1109,16 @@
             <button class="close-modal" onclick="closeLeadForm()">×</button>
             <h2>Get Your Free Quote</h2>
             <p>Tell us about your project and we'll follow up with a personalized estimate.</p>
-            <iframe src="https://formspree.io/f/mqeylrar" style="width: 100%; height: 500px; border: none; border-radius: 12px;"></iframe>
+            <form method="POST" action="https://formspree.io/f/mqeylrar" style="display:flex;flex-direction:column;gap:14px;max-height:500px;overflow-y:auto;padding:4px;">
+                <div><label style="display:block;font-weight:600;margin-bottom:4px;color:#1a3a2a;font-size:14px;">Full Name *</label><input type="text" name="name" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;font-family:DM Sans,sans-serif;"></div>
+                <div><label style="display:block;font-weight:600;margin-bottom:4px;color:#1a3a2a;font-size:14px;">Phone *</label><input type="tel" name="phone" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;font-family:DM Sans,sans-serif;"></div>
+                <div><label style="display:block;font-weight:600;margin-bottom:4px;color:#1a3a2a;font-size:14px;">Email *</label><input type="email" name="email" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;font-family:DM Sans,sans-serif;"></div>
+                <div><label style="display:block;font-weight:600;margin-bottom:4px;color:#1a3a2a;font-size:14px;">Service</label><select name="service" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;font-family:DM Sans,sans-serif;background:#fff;"><option value="">Select a service...</option><option>Artificial Turf - Residential</option><option>Artificial Turf - Commercial</option><option>Pet-Friendly Turf</option><option>Putting Green</option><option>Sport Court / Pickleball</option><option>Playground Turf</option><option>Hardscape / Pavers</option><option>Other</option></select></div>
+                <div><label style="display:block;font-weight:600;margin-bottom:4px;color:#1a3a2a;font-size:14px;">Tell us about your project</label><textarea name="message" rows="3" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;font-family:DM Sans,sans-serif;resize:vertical;"></textarea></div>
+                <input type="hidden" name="_subject" value="New Quote Request - LawnLogic Services">
+                <input type="hidden" name="_next" value="https://www.lawnlogicturf.com/services">
+                <button type="submit" style="width:100%;padding:14px;background:#3cb371;color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;font-family:DM Sans,sans-serif;letter-spacing:0.5px;">Get My Free Quote &#8594;</button>
+              </form>
         </div>
     </div>
 
