@@ -16,6 +16,17 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "calculator.lawnlogicturf.com"
+        }
+      ],
+      "destination": "https://lawnlogicturf.com/instant-quote",
+      "statusCode": 301
+    },
+    {
       "source": "/store-lawnlogic/:path*",
       "destination": "https://lawnlogic.squarespace.com/store-lawnlogic/:path*",
       "statusCode": 308
